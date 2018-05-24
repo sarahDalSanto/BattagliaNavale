@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Main2Activity extends AppCompatActivity implements Fragment1G1.interfaceFragment{
+public class Main2Activity extends AppCompatActivity implements Fragment1G1.interfaceFragment, Fragment1G2.interfaceFragment2, Fragment2G1.interfaceFragment{
 
     String nome1, nome2;
     TextView tv_nomeGiocatore;
@@ -28,16 +28,77 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
         }
 
         tv_nomeGiocatore = findViewById(R.id.tv_nomeGiocatore);
-        tv_nomeGiocatore.setText(nome1+" posiziona le barche");
+        tv_nomeGiocatore.setText("Turno di "+nome1);
 
+
+        //per il fragment
         manager = getSupportFragmentManager();
         final FragmentTransaction transaction = manager.beginTransaction();
 
-        final Fragment1G1 fragment = new Fragment1G1();
+        final Fragment1G1 fragment1 = new Fragment1G1();
         //replace perchè alrimenti si sovrappone
-        transaction.replace(R.id.container, fragment);
+        transaction.replace(R.id.container, fragment1);
         transaction.commit();
 
 
+    }
+
+    @Override
+    public void setTextAct() {
+        tv_nomeGiocatore.setText("Turno di "+nome2);
+    }
+
+    @Override
+    public void cambiaFrag() {
+        //per il fragment
+        manager = getSupportFragmentManager();
+        final FragmentTransaction transaction = manager.beginTransaction();
+
+        final Fragment1G2 fragment2 = new Fragment1G2();
+        //replace perchè alrimenti si sovrappone
+        transaction.replace(R.id.container, fragment2);
+        transaction.commit();
+    }
+
+    @Override
+    public void vediBarche() {
+        //per il fragment
+        manager = getSupportFragmentManager();
+        final FragmentTransaction transaction = manager.beginTransaction();
+
+        final Fragment2G1 fragment3 = new Fragment2G1();
+        //replace perchè alrimenti si sovrappone
+        transaction.replace(R.id.container, fragment3);
+        transaction.commit();
+    }
+
+
+    @Override
+    public void setTextAct2() {
+        tv_nomeGiocatore.setText("Turno di "+nome1);
+    }
+
+    @Override
+    public void cambiaFrag2() {
+        //per il fragment
+        manager = getSupportFragmentManager();
+        final FragmentTransaction transaction = manager.beginTransaction();
+
+        final Fragment1G1 fragment1 = new Fragment1G1();
+        //replace perchè alrimenti si sovrappone
+        transaction.replace(R.id.container, fragment1);
+        transaction.commit();
+    }
+
+    @Override
+    public void indietro() {
+        //per il fragment
+        manager = getSupportFragmentManager();
+        final FragmentTransaction transaction = manager.beginTransaction();
+
+        final Fragment1G1 fragment1 = new Fragment1G1();
+        //replace perchè alrimenti si sovrappone
+        transaction.replace(R.id.container, fragment1);
+        transaction.commit();
     }
 }
