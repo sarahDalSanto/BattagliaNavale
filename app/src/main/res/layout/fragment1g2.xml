@@ -28,7 +28,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/f1g2_D7"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -36,25 +36,25 @@
             app:layout_row="7" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/f1g2_E7"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/f1g2_F7"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/f1g2_G7"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button" />
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/f1g2_G1"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -62,7 +62,7 @@
             app:layout_row="1" />
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/f1g2_A1"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -70,7 +70,7 @@
             app:layout_row="1" />
 
         <Button
-            android:id="@+id/button9"
+            android:id="@+id/f1g2_B1"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -78,7 +78,7 @@
             app:layout_row="1" />
 
         <Button
-            android:id="@+id/button10"
+            android:id="@+id/f1g2_C1"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -86,7 +86,7 @@
             app:layout_row="1" />
 
         <Button
-            android:id="@+id/button11"
+            android:id="@+id/f1g2_G2"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -94,7 +94,7 @@
             app:layout_row="2" />
 
         <Button
-            android:id="@+id/button12"
+            android:id="@+id/f1g2_A2"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -102,7 +102,7 @@
             app:layout_row="2" />
 
         <Button
-            android:id="@+id/button13"
+            android:id="@+id/f1g2_B2"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -110,7 +110,7 @@
             app:layout_row="2" />
 
         <Button
-            android:id="@+id/button14"
+            android:id="@+id/f1g2_C2"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -118,7 +118,7 @@
             app:layout_row="2" />
 
         <Button
-            android:id="@+id/button15"
+            android:id="@+id/f1g2_G3"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -126,7 +126,7 @@
             app:layout_row="3" />
 
         <Button
-            android:id="@+id/button16"
+            android:id="@+id/f1g2_A3"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -134,7 +134,7 @@
             app:layout_row="3" />
 
         <Button
-            android:id="@+id/button17"
+            android:id="@+id/f1g2_B3"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -142,7 +142,7 @@
             app:layout_row="3" />
 
         <Button
-            android:id="@+id/button18"
+            android:id="@+id/f1g2_C3"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -150,7 +150,7 @@
             app:layout_row="3" />
 
         <Button
-            android:id="@+id/button20"
+            android:id="@+id/f1g2_A7"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -158,7 +158,7 @@
             app:layout_row="7" />
 
         <Button
-            android:id="@+id/button21"
+            android:id="@+id/f1g2_B7"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -166,7 +166,7 @@
             app:layout_row="7" />
 
         <Button
-            android:id="@+id/button22"
+            android:id="@+id/f1g2_D1"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -174,7 +174,7 @@
             app:layout_row="1" />
 
         <Button
-            android:id="@+id/button23"
+            android:id="@+id/f1g2_E1"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -182,7 +182,7 @@
             app:layout_row="1" />
 
         <Button
-            android:id="@+id/button24"
+            android:id="@+id/f1g2_D2"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -190,7 +190,7 @@
             app:layout_row="2" />
 
         <Button
-            android:id="@+id/button25"
+            android:id="@+id/f1g2_E2"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -198,7 +198,7 @@
             app:layout_row="2" />
 
         <Button
-            android:id="@+id/button26"
+            android:id="@+id/f1g2_D3"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -206,7 +206,7 @@
             app:layout_row="3" />
 
         <Button
-            android:id="@+id/button27"
+            android:id="@+id/f1g2_E3"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -214,7 +214,7 @@
             app:layout_row="3" />
 
         <Button
-            android:id="@+id/button28"
+            android:id="@+id/f1g2_C7"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -222,7 +222,7 @@
             app:layout_row="7" />
 
         <Button
-            android:id="@+id/button29"
+            android:id="@+id/f1g2_F1"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -230,7 +230,7 @@
             app:layout_row="1" />
 
         <Button
-            android:id="@+id/button30"
+            android:id="@+id/f1g2_F2"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -238,7 +238,7 @@
             app:layout_row="2" />
 
         <Button
-            android:id="@+id/button31"
+            android:id="@+id/f1g2_F3"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -246,7 +246,7 @@
             app:layout_row="3" />
 
         <Button
-            android:id="@+id/button32"
+            android:id="@+id/f1g2_G4"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -254,7 +254,7 @@
             app:layout_row="4" />
 
         <Button
-            android:id="@+id/button33"
+            android:id="@+id/f1g2_A4"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -262,7 +262,7 @@
             app:layout_row="4" />
 
         <Button
-            android:id="@+id/button34"
+            android:id="@+id/f1g2_B4"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -270,7 +270,7 @@
             app:layout_row="4" />
 
         <Button
-            android:id="@+id/button35"
+            android:id="@+id/f1g2_C4"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -278,7 +278,7 @@
             app:layout_row="4" />
 
         <Button
-            android:id="@+id/button36"
+            android:id="@+id/f1g2_D4"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -286,7 +286,7 @@
             app:layout_row="4" />
 
         <Button
-            android:id="@+id/button37"
+            android:id="@+id/f1g2_E4"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -294,7 +294,7 @@
             app:layout_row="4" />
 
         <Button
-            android:id="@+id/button38"
+            android:id="@+id/f1g2_F4"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -302,7 +302,7 @@
             app:layout_row="4" />
 
         <Button
-            android:id="@+id/button39"
+            android:id="@+id/f1g2_G5"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -310,7 +310,7 @@
             app:layout_row="5" />
 
         <Button
-            android:id="@+id/button40"
+            android:id="@+id/f1g2_G6"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -318,7 +318,7 @@
             app:layout_row="6" />
 
         <Button
-            android:id="@+id/button41"
+            android:id="@+id/f1g2_A5"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -326,7 +326,7 @@
             app:layout_row="5" />
 
         <Button
-            android:id="@+id/button42"
+            android:id="@+id/f1g2_A6"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -334,7 +334,7 @@
             app:layout_row="6" />
 
         <Button
-            android:id="@+id/button43"
+            android:id="@+id/f1g2_B5"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -342,7 +342,7 @@
             app:layout_row="5" />
 
         <Button
-            android:id="@+id/button44"
+            android:id="@+id/f1g2_B6"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -350,7 +350,7 @@
             app:layout_row="6" />
 
         <Button
-            android:id="@+id/button45"
+            android:id="@+id/f1g2_C5"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -358,7 +358,7 @@
             app:layout_row="5" />
 
         <Button
-            android:id="@+id/button46"
+            android:id="@+id/f1g2_C6"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -366,7 +366,7 @@
             app:layout_row="6" />
 
         <Button
-            android:id="@+id/button47"
+            android:id="@+id/f1g2_D5"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -374,7 +374,7 @@
             app:layout_row="5" />
 
         <Button
-            android:id="@+id/button48"
+            android:id="@+id/f1g2_D6"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -382,7 +382,7 @@
             app:layout_row="6" />
 
         <Button
-            android:id="@+id/button49"
+            android:id="@+id/f1g2_E5"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -390,7 +390,7 @@
             app:layout_row="5" />
 
         <Button
-            android:id="@+id/button50"
+            android:id="@+id/f1g2_F5"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -398,7 +398,7 @@
             app:layout_row="5" />
 
         <Button
-            android:id="@+id/button51"
+            android:id="@+id/f1g2_E6"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
@@ -406,7 +406,7 @@
             app:layout_row="6" />
 
         <Button
-            android:id="@+id/button52"
+            android:id="@+id/f1g2_F6"
             android:layout_width="44dp"
             android:layout_height="44dp"
             android:text="Button"
