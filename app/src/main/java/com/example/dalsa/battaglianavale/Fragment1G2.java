@@ -31,6 +31,7 @@ public class Fragment1G2 extends Fragment {
 
         public void setTextAct2();
         public void cambiaFrag2();
+        public void vediBarche2();
     }
 
 
@@ -52,12 +53,20 @@ public class Fragment1G2 extends Fragment {
             }
         });
 
-        return view;
+
+
+        Button btn_vediBarche2 = view.findViewById(R.id.btn_vediBarche2);
+        btn_vediBarche2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                iListener2.vediBarche2();
+            }
+        });
+
+
+            return view;
+            }
+
+
+
     }
-
-
-
-
-
-
-}
