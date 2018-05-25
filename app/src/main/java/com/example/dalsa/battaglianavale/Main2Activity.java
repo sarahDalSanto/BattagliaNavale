@@ -4,38 +4,40 @@ import android.content.Intent;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Main2Activity extends AppCompatActivity implements Fragment1G1.interfaceFragment, Fragment1G2.interfaceFragment2, Fragment2G1.interfaceFragment, Fragment2G2.interfaceFragment2{
+public class Main2Activity extends AppCompatActivity implements Fragment1G1.interfaceFragment, Fragment1G2.interfaceFragment2, Fragment2G1.interfaceFragment, Fragment2G2.interfaceFragment2 {
 
-    Boolean selezionato;
+    Boolean selezionato = false;
     String nome1, nome2;
     TextView tv_nomeGiocatore;
     android.support.v4.app.FragmentManager manager;
 
+    Button btn;
+
     //per salvare i calcoli
     public static final String SELEZIONATO = "SELEZIONATO";
-    //public static final int COLORE = (R.color.colorAccent);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        selezionato = false;
 
-        if(getIntent().getExtras() != null){
+        if (getIntent().getExtras() != null) {
             Bundle bundle = getIntent().getExtras();
-            nome1 = bundle.get("numero1")+"";
-            nome2 = bundle.get("numero2")+"";
+            nome1 = bundle.get("numero1") + "";
+            nome2 = bundle.get("numero2") + "";
             //Toast.makeText(Main2Activity.this, nome1+nome2, Toast.LENGTH_LONG).show();
         }
 
         tv_nomeGiocatore = findViewById(R.id.tv_nomeGiocatore);
-        tv_nomeGiocatore.setText("Turno di "+nome1);
+        tv_nomeGiocatore.setText("Turno di " + nome1);
 
 
         //per il fragment
@@ -48,21 +50,29 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
         transaction.commit();
 
 
-
         //salva i contenuti anche se giro lo schermo o cambio activity
-        if(savedInstanceState != null){
+        if (savedInstanceState != null) {
             selezionato = savedInstanceState.getBoolean(SELEZIONATO);
-            //int colore = savedInstanceState.getInt(COLORE);
         }
+
+
+
     }
 
-    //metodi per le barche
-    public void onSelect(View view){
+    //metodi per le barche selezionate nel fragment 2 giocatore 1
+    public void onSelect(View view) {
         selezionato = true;
-        if(selezionato) {
-            ((Button) view).setBackgroundColor(getResources().getColor(R.color.colorAccent));
+        ((Button)view).setBackgroundColor(getResources().getColor(R.color.colorAccent));
+    }
 
-        }
+    //metodi per le barche selezionate nel fragment 1 giocatore 2
+
+
+    //per salvare i dati quando cambio activity
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putBoolean(SELEZIONATO, selezionato);
     }
 
 
@@ -70,7 +80,7 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
 
     @Override
     public void setTextAct() {
-        tv_nomeGiocatore.setText("Turno di "+nome2);
+        tv_nomeGiocatore.setText("Turno di " + nome2);
     }
 
     @Override
@@ -95,12 +105,15 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
         //replace perchè alrimenti si sovrappone
         transaction.replace(R.id.container, fragment3);
         transaction.commit();
+
+
+
     }
 
 
     @Override
     public void setTextAct2() {
-        tv_nomeGiocatore.setText("Turno di "+nome1);
+        tv_nomeGiocatore.setText("Turno di " + nome1);
     }
 
     @Override
@@ -137,6 +150,9 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
         //replace perchè alrimenti si sovrappone
         transaction.replace(R.id.container, fragment1);
         transaction.commit();
+
+
+
     }
 
     @Override
