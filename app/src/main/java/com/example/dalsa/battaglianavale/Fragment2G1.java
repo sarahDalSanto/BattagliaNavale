@@ -64,6 +64,7 @@ public class Fragment2G1 extends Fragment {
             }
         });
 
+
         return view;
     }
 

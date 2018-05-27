@@ -3,6 +3,7 @@ package com.example.dalsa.battaglianavale;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,9 +18,12 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
     boolean[] selezionatiF2G2 = new boolean[49];
     boolean[] selezionatiF2G1 = new boolean[49];
 
+    int[] colpiti = new int[49];
+
     //per salvare i calcoli
     public static final String SELEZIONATO = "SELEZIONATO";
     public static final String SELEZIONATO2 = "SELEZIONATO2";
+    public static final String COLPITI = "COLPITI";
 
 
     @Override
@@ -62,6 +66,7 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
         if (savedInstanceState != null) {
             selezionatiF2G2 = savedInstanceState.getBooleanArray(SELEZIONATO);
             selezionatiF2G1 = savedInstanceState.getBooleanArray(SELEZIONATO2);
+            colpiti = savedInstanceState.getIntArray(COLPITI);
         }
 
 
@@ -78,6 +83,8 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putBooleanArray(SELEZIONATO ,selezionatiF2G2);
+        outState.putBooleanArray(SELEZIONATO2, selezionatiF2G1);
+        outState.putIntArray(COLPITI, colpiti);
     }
 
     /*
@@ -94,6 +101,7 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
     }
 
 
+
     /*
     metodo per controllare se è stato selezionato qualcosa F1G1
      */
@@ -104,13 +112,28 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
 
     @Override
     public void toastColpito() {
-        Toast.makeText(this, "HAI COLPITO UNA BARCA", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "HAI COLPITO UNA BARCA", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void toastNonColpito() {
-        Toast.makeText(this, " NON HAI COLPITO NIENTE", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, " NON HAI COLPITO NIENTE", Toast.LENGTH_SHORT).show();
     }
+
+    @Override
+    public View colpito(View v, int i) {
+        colpiti[i] = getResources().getColor(R.color.colorColpito);
+         v.setBackgroundColor(colpiti[i]);
+         return v;
+    }
+
+    @Override
+    public View nonColpito(View v, int i) {
+        colpiti[i] = getResources().getColor(R.color.colorNonColpito);
+        v.setBackgroundColor(colpiti[i]);
+        return v;
+    }
+
 
     /*
    metodo per controllare se è stato selezionato qualcosa F1G2
@@ -122,12 +145,12 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
 
     @Override
     public void toastColpito2() {
-        Toast.makeText(this, "HAI COLPITO UNA BARCA", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "HAI COLPITO UNA BARCA", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void toastNonColpito2() {
-        Toast.makeText(this, " NON HAI COLPITO NIENTE", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, " NON HAI COLPITO NIENTE", Toast.LENGTH_SHORT).show();
     }
 
 

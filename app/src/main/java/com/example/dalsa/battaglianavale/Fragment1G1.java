@@ -40,12 +40,15 @@ public class Fragment1G1 extends Fragment {
         public boolean selezioantoBoh(int i);
         public void toastColpito();
         public void toastNonColpito();
+
+        public View colpito(View v, int i);
+        public View nonColpito(View v, int i);
     }
 
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(final LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment1g1, null);
 
@@ -71,7 +74,7 @@ public class Fragment1G1 extends Fragment {
          creo tutti i bottoni F1G1
         */
         Button f1g1_A1 = view.findViewById(R.id.f1g1_A1);
-        Button f1g1_A2 = view.findViewById(R.id.f1g1_A2);
+        final Button f1g1_A2 = view.findViewById(R.id.f1g1_A2);
         Button f1g1_A3 = view.findViewById(R.id.f1g1_A3);
         Button f1g1_A4 = view.findViewById(R.id.f1g1_A4);
         Button f1g1_A5 = view.findViewById(R.id.f1g1_A5);
@@ -138,13 +141,30 @@ public class Fragment1G1 extends Fragment {
                 funziona(A1);
             }
         });
-        f1g1_A2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                A2 = iListener.selezioantoBoh(1);
-                funziona(A2);
-            }
-        });
+
+        //come cazzo facciamooooooo?????
+        if(iListener.selezioantoBoh(1)==true) {
+
+            f1g1_A2.setBackgroundColor(getResources().getColor(R.color.colorColpito));
+
+            f1g1_A2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    A2 = iListener.selezioantoBoh(1);
+                    //funziona(A2);
+                    if (!A2) {
+                        iListener.toastNonColpito();
+                        iListener.nonColpito(f1g1_A2, 1);
+
+                    } else {
+                        iListener.toastColpito();
+                        //f1g1_A2.setBackgroundColor(getResources().getColor(R.color.colorColpito));
+                        iListener.colpito(f1g1_A2, 1);
+                    }
+                }
+            });
+        }
+
         f1g1_A3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -490,6 +510,7 @@ public class Fragment1G1 extends Fragment {
     public void funziona( boolean b){
         if(!b){
             iListener.toastNonColpito();
+
         }else{
             iListener.toastColpito();
         }
