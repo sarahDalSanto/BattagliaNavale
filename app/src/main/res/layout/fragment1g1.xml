@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorText_Gray">
+    android:background="@color/colorBackground_DarkGray">
 
     <android.support.v7.widget.GridLayout
         android:id="@+id/mieBarche"
@@ -603,7 +603,7 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
-            android:id="@+id/btn_vediBarche"
+            android:id="@+id/btn_vediBarche_g1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginRight="4dp"
@@ -616,7 +616,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/btn_cambiaTurno"
+            android:id="@+id/btn_concludiTurno_g1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="4dp"

@@ -11,7 +11,6 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-
     Button btn;
     EditText et_g1, et_g2;
 
@@ -24,10 +23,8 @@ public class MainActivity extends AppCompatActivity {
         et_g2 = findViewById(R.id.et_giocatore2);
         btn = findViewById(R.id.btn);
 
-        String nome1 = et_g1.getText()+"";
-        String nome2 = et_g2.getText()+"";
-
-
+        String nome1 = et_g1.getText() + "";
+        String nome2 = et_g2.getText() + "";
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,7 +35,5 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
     }
 }

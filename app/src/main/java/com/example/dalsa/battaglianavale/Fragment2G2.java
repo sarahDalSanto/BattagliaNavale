@@ -11,28 +11,27 @@ import android.widget.Button;
 
 public class Fragment2G2 extends Fragment {
 
-    //variabile booleana per vedere se è stato selezionato il pulsante
+    //Variabile booleana per vedere se è stato selezionato il pulsante
 
-    interfaceFragment2 iListener4;
+    interfaceFragment2 iListener_f2g2;
 
-    //metodo onAttach
+    //Metodo onAttach
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
-        if(activity instanceof Fragment2G2.interfaceFragment2){
-            iListener4 = (Fragment2G2.interfaceFragment2) activity;
-        }else{
-            iListener4 = null;
+        if (activity instanceof Fragment2G2.interfaceFragment2) {
+            iListener_f2g2 = (Fragment2G2.interfaceFragment2) activity;
+        } else {
+            iListener_f2g2 = null;
         }
     }
 
+    //Interfaccia
+    public interface interfaceFragment2 {
+        public void indietro_f2g2();
 
-    //INTERFACCIA
-    public interface interfaceFragment2{
-        public void indietro2();
-        public void selezionatoTrue(int i);
+        public void selezionatoTrue_f2g2(int i);
     }
-
 
     @Nullable
     @Override
@@ -40,18 +39,15 @@ public class Fragment2G2 extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment2g2, null);
 
-       Button btn_indietro2 = view.findViewById(R.id.btn_indietro2);
-       btn_indietro2.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               iListener4.indietro2();
-           }
-       });
+        Button btn_indietro_f2g2 = view.findViewById(R.id.btn_indietro_f2g2);
+        btn_indietro_f2g2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                iListener_f2g2.indietro_f2g2();
+            }
+        });
 
-
-        /*
-         creo tutti i bottoni F2G2
-        */
+        //Creo tutti i bottoni F2G2
         Button f2g2_A1 = view.findViewById(R.id.f2g2_A1);
         Button f2g2_A2 = view.findViewById(R.id.f2g2_A2);
         Button f2g2_A3 = view.findViewById(R.id.f2g2_A3);
@@ -108,308 +104,351 @@ public class Fragment2G2 extends Fragment {
         Button f2g2_G6 = view.findViewById(R.id.f2g2_G6);
         Button f2g2_G7 = view.findViewById(R.id.f2g2_G7);
 
-        /*
-         uso i bottoni F2G2
-        */
+        //Uso i bottoni F2G2
         f2g2_A1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //metodo per far vedere se è stato selezionato
-                iListener4.selezionatoTrue(0);
+                iListener_f2g2.selezionatoTrue_f2g2(0);
             }
         });
+
         f2g2_A2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(1);
+                iListener_f2g2.selezionatoTrue_f2g2(1);
             }
         });
+
         f2g2_A3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(2);
+                iListener_f2g2.selezionatoTrue_f2g2(2);
             }
         });
+
         f2g2_A4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(3);
+                iListener_f2g2.selezionatoTrue_f2g2(3);
             }
         });
+
         f2g2_A5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(4);
+                iListener_f2g2.selezionatoTrue_f2g2(4);
             }
         });
+
         f2g2_A6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(5);
+                iListener_f2g2.selezionatoTrue_f2g2(5);
             }
         });
+
         f2g2_A7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(6);
+                iListener_f2g2.selezionatoTrue_f2g2(6);
             }
         });
+
         f2g2_B1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(7);
+                iListener_f2g2.selezionatoTrue_f2g2(7);
             }
         });
+
         f2g2_B2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(8);
+                iListener_f2g2.selezionatoTrue_f2g2(8);
             }
         });
+
         f2g2_B3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(9);
+                iListener_f2g2.selezionatoTrue_f2g2(9);
             }
         });
+
         f2g2_B4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(10);
+                iListener_f2g2.selezionatoTrue_f2g2(10);
             }
         });
+
         f2g2_B5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(11);
+                iListener_f2g2.selezionatoTrue_f2g2(11);
             }
         });
+
         f2g2_B6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(12);
+                iListener_f2g2.selezionatoTrue_f2g2(12);
             }
         });
+
         f2g2_B7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(13);
+                iListener_f2g2.selezionatoTrue_f2g2(13);
             }
         });
+
         f2g2_C1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(14);
+                iListener_f2g2.selezionatoTrue_f2g2(14);
             }
         });
+
         f2g2_C2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(15);
+                iListener_f2g2.selezionatoTrue_f2g2(15);
             }
         });
+
         f2g2_C3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(16);
+                iListener_f2g2.selezionatoTrue_f2g2(16);
             }
         });
+
         f2g2_C4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(17);
+                iListener_f2g2.selezionatoTrue_f2g2(17);
             }
         });
+
         f2g2_C5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(18);
+                iListener_f2g2.selezionatoTrue_f2g2(18);
             }
         });
+
         f2g2_C6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(19);
+                iListener_f2g2.selezionatoTrue_f2g2(19);
             }
         });
+
         f2g2_C7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(20);
+                iListener_f2g2.selezionatoTrue_f2g2(20);
             }
         });
+
         f2g2_D1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(21);
+                iListener_f2g2.selezionatoTrue_f2g2(21);
             }
         });
+
         f2g2_D2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(22);
+                iListener_f2g2.selezionatoTrue_f2g2(22);
             }
         });
+
         f2g2_D3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(23);
+                iListener_f2g2.selezionatoTrue_f2g2(23);
             }
         });
+
         f2g2_D4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(24);
+                iListener_f2g2.selezionatoTrue_f2g2(24);
             }
         });
+
         f2g2_D5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(25);
+                iListener_f2g2.selezionatoTrue_f2g2(25);
             }
         });
+
         f2g2_D6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(26);
+                iListener_f2g2.selezionatoTrue_f2g2(26);
             }
         });
+
         f2g2_D7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(27);
+                iListener_f2g2.selezionatoTrue_f2g2(27);
             }
         });
+
         f2g2_E1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(28);
+                iListener_f2g2.selezionatoTrue_f2g2(28);
             }
         });
+
         f2g2_E2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(29);
+                iListener_f2g2.selezionatoTrue_f2g2(29);
             }
         });
+
         f2g2_E3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(30);
+                iListener_f2g2.selezionatoTrue_f2g2(30);
             }
         });
+
         f2g2_E4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(31);
+                iListener_f2g2.selezionatoTrue_f2g2(31);
             }
         });
+
         f2g2_E5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(32);
+                iListener_f2g2.selezionatoTrue_f2g2(32);
             }
         });
+
         f2g2_E6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(33);
+                iListener_f2g2.selezionatoTrue_f2g2(33);
             }
         });
+
         f2g2_E7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(34);
+                iListener_f2g2.selezionatoTrue_f2g2(34);
             }
         });
+
         f2g2_F1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(35);
+                iListener_f2g2.selezionatoTrue_f2g2(35);
             }
         });
+
         f2g2_F2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(36);
+                iListener_f2g2.selezionatoTrue_f2g2(36);
             }
         });
+
         f2g2_F3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(37);
+                iListener_f2g2.selezionatoTrue_f2g2(37);
             }
         });
+
         f2g2_F4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(38);
+                iListener_f2g2.selezionatoTrue_f2g2(38);
             }
         });
+
         f2g2_F5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(39);
+                iListener_f2g2.selezionatoTrue_f2g2(39);
             }
         });
+
         f2g2_F6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(40);
+                iListener_f2g2.selezionatoTrue_f2g2(40);
             }
         });
+
         f2g2_F7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(41);
+                iListener_f2g2.selezionatoTrue_f2g2(41);
             }
         });
+
         f2g2_G1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(42);
+                iListener_f2g2.selezionatoTrue_f2g2(42);
             }
         });
+
         f2g2_G2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(43);
+                iListener_f2g2.selezionatoTrue_f2g2(43);
             }
         });
+
         f2g2_G3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(44);
+                iListener_f2g2.selezionatoTrue_f2g2(44);
             }
         });
+
         f2g2_G4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(45);
+                iListener_f2g2.selezionatoTrue_f2g2(45);
             }
         });
+
         f2g2_G5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(46);
+                iListener_f2g2.selezionatoTrue_f2g2(46);
             }
         });
+
         f2g2_G6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(47);
+                iListener_f2g2.selezionatoTrue_f2g2(47);
             }
         });
+
         f2g2_G7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener4.selezionatoTrue(48);
+                iListener_f2g2.selezionatoTrue_f2g2(48);
             }
         });
 
         return view;
     }
-
-
-
 }
