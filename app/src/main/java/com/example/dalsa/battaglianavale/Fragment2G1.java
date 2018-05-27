@@ -28,6 +28,7 @@ public class Fragment2G1 extends Fragment {
     //INTERFACCIA
     public interface interfaceFragment{
         public void indietro();
+        public void selezionatoTrue2(int i);
     }
 
 
@@ -46,7 +47,22 @@ public class Fragment2G1 extends Fragment {
         });
 
 
+        /*
+        CREO I BOTTONI F2G1 (leo falli tu)
+         */
+        Button f2g1_A1 = view.findViewById(R.id.f2g1_A1);
+        Button f2g1_A2 = view.findViewById(R.id.f2g1_A2);
 
+
+        /*
+        USO I BOTTONI F2G1 (leo falli tuuuuuu per l'ordine dei numeri basta che guardi F2G2)
+         */
+        f2g1_A1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                iListener3.selezionatoTrue2(0);
+            }
+        });
 
         return view;
     }

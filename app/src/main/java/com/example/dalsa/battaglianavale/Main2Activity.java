@@ -1,32 +1,36 @@
 package com.example.dalsa.battaglianavale;
 
-import android.content.Intent;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class Main2Activity extends AppCompatActivity implements Fragment1G1.interfaceFragment, Fragment1G2.interfaceFragment2, Fragment2G1.interfaceFragment, Fragment2G2.interfaceFragment2 {
 
-    Boolean selezionato = false;
+
+
     String nome1, nome2;
     TextView tv_nomeGiocatore;
     android.support.v4.app.FragmentManager manager;
 
-    Button btn;
+    boolean[] selezionatiF2G2 = new boolean[49];
+    boolean[] selezionatiF2G1 = new boolean[49];
 
     //per salvare i calcoli
     public static final String SELEZIONATO = "SELEZIONATO";
+    public static final String SELEZIONATO2 = "SELEZIONATO2";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
+        for(int i=0; i<49; i++){
+            selezionatiF2G2[i]= false;
+            selezionatiF2G1[i] = false;
+        }
 
 
         if (getIntent().getExtras() != null) {
@@ -40,44 +44,97 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
         tv_nomeGiocatore.setText("Turno di " + nome1);
 
 
+        //creo tutti i Fragment
+        final Fragment1G1 fragment1g1 = new Fragment1G1();
+        Fragment2G1 fragment2g1 = new Fragment2G1();
+        Fragment1G2 fragment1g2 = new Fragment1G2();
+        Fragment2G2 fragment2g2 = new Fragment2G2();
+
         //per il fragment
         manager = getSupportFragmentManager();
         final FragmentTransaction transaction = manager.beginTransaction();
-
-        final Fragment1G1 fragment1 = new Fragment1G1();
         //replace perchè alrimenti si sovrappone
-        transaction.replace(R.id.container, fragment1);
+        transaction.replace(R.id.container, fragment1g1);
         transaction.commit();
 
 
         //salva i contenuti anche se giro lo schermo o cambio activity
         if (savedInstanceState != null) {
-            selezionato = savedInstanceState.getBoolean(SELEZIONATO);
+            selezionatiF2G2 = savedInstanceState.getBooleanArray(SELEZIONATO);
+            selezionatiF2G1 = savedInstanceState.getBooleanArray(SELEZIONATO2);
         }
 
 
 
+
     }
 
-    //metodi per le barche selezionate nel fragment 2 giocatore 1
-    public void onSelect(View view) {
-        selezionato = true;
-        ((Button)view).setBackgroundColor(getResources().getColor(R.color.colorAccent));
-    }
-
-    //metodi per le barche selezionate nel fragment 1 giocatore 2
 
 
-    //per salvare i dati quando cambio activity
+    /*
+     per salvare i dati quando cambio activity
+    */
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putBoolean(SELEZIONATO, selezionato);
+        outState.putBooleanArray(SELEZIONATO ,selezionatiF2G2);
+    }
+
+    /*
+     metodo per i selezionati F2G2
+    */
+    public void selezionatoTrue(int i){
+        selezionatiF2G2[i] = true;
+    }
+    /*
+    metodo per i selezionati F2G1
+   */
+    public void selezionatoTrue2(int i){
+        selezionatiF2G1[i] = true;
     }
 
 
-    //i metodi overrati dai fragment
+    /*
+    metodo per controllare se è stato selezionato qualcosa F1G1
+     */
+    @Override
+    public boolean selezioantoBoh(int i) {
+        return selezionatiF2G2[i];
+    }
 
+    @Override
+    public void toastColpito() {
+        Toast.makeText(this, "HAI COLPITO UNA BARCA", Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void toastNonColpito() {
+        Toast.makeText(this, " NON HAI COLPITO NIENTE", Toast.LENGTH_LONG).show();
+    }
+
+    /*
+   metodo per controllare se è stato selezionato qualcosa F1G2
+    */
+    @Override
+    public boolean selezioantoBoh2(int i) {
+        return selezionatiF2G1[i];
+    }
+
+    @Override
+    public void toastColpito2() {
+        Toast.makeText(this, "HAI COLPITO UNA BARCA", Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void toastNonColpito2() {
+        Toast.makeText(this, " NON HAI COLPITO NIENTE", Toast.LENGTH_LONG).show();
+    }
+
+
+
+    /*
+     i metodi overrati dai fragment
+    */
     @Override
     public void setTextAct() {
         tv_nomeGiocatore.setText("Turno di " + nome2);
@@ -105,9 +162,20 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
         //replace perchè alrimenti si sovrappone
         transaction.replace(R.id.container, fragment3);
         transaction.commit();
+    }
 
 
 
+    @Override
+    public void indietro() {
+        //per il fragment
+        manager = getSupportFragmentManager();
+        final FragmentTransaction transaction = manager.beginTransaction();
+
+        final Fragment1G1 fragment1 = new Fragment1G1();
+        //replace perchè alrimenti si sovrappone
+        transaction.replace(R.id.container, fragment1);
+        transaction.commit();
     }
 
 
@@ -140,20 +208,7 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
         transaction.commit();
     }
 
-    @Override
-    public void indietro() {
-        //per il fragment
-        manager = getSupportFragmentManager();
-        final FragmentTransaction transaction = manager.beginTransaction();
 
-        final Fragment1G1 fragment1 = new Fragment1G1();
-        //replace perchè alrimenti si sovrappone
-        transaction.replace(R.id.container, fragment1);
-        transaction.commit();
-
-
-
-    }
 
     @Override
     public void indietro2() {
@@ -166,6 +221,9 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
         transaction.replace(R.id.container, fragment2);
         transaction.commit();
     }
+
+
+
 
 
 }
