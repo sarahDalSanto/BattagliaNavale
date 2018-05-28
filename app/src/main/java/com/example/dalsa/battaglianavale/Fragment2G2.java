@@ -31,6 +31,10 @@ public class Fragment2G2 extends Fragment {
         public void indietro_f2g2();
 
         public void selezionatoTrue_f2g2(int i);
+
+        public void avanti_f2g2();
+
+        public void setTextAct_f2g2();
     }
 
     @Nullable
@@ -39,11 +43,22 @@ public class Fragment2G2 extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment2g2, null);
 
-        Button btn_indietro_f2g2 = view.findViewById(R.id.btn_indietro_f2g2);
+        final Button btn_indietro_f2g2 = view.findViewById(R.id.btn_indietro_f2g2);
         btn_indietro_f2g2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.indietro_f2g2();
+            }
+        });
+
+        final Button btn_avanti_f2g2 = view.findViewById(R.id.btn_avanti_f2g2);
+        btn_avanti_f2g2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                iListener_f2g2.avanti_f2g2();
+                btn_indietro_f2g2.setVisibility(View.VISIBLE);
+                btn_avanti_f2g2.setVisibility(View.INVISIBLE);
+                iListener_f2g2.setTextAct_f2g2();
             }
         });
 

@@ -42,6 +42,8 @@ public class Fragment1G1 extends Fragment {
         public View colpito(View v, int i);
 
         public View nonColpito(View v, int i);
+
+        public boolean giaSelezionatiF1G1(int i);
     }
 
     @Nullable
@@ -65,7 +67,6 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f1g1.vediBarche_f1g1();
-
             }
         });
 
@@ -136,15 +137,14 @@ public class Fragment1G1 extends Fragment {
             }
         });
 
-        //Come cazzo facciamooooooo?????
-        if (iListener_f1g1.selezionato_f1g1(1) == true) {
 
-            f1g1_A2.setBackgroundColor(getResources().getColor(R.color.colorColpito));
+
 
             f1g1_A2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     A2 = iListener_f1g1.selezionato_f1g1(1);
+                    iListener_f1g1.giaSelezionatiF1G1(1);
                     //funziona(A2);
                     if (!A2) {
                         iListener_f1g1.toastNonColpito_f1g1();
@@ -152,12 +152,21 @@ public class Fragment1G1 extends Fragment {
 
                     } else {
                         iListener_f1g1.toastColpito_f1g1();
-                        //f1g1_A2.setBackgroundColor(getResources().getColor(R.color.colorColpito));
                         iListener_f1g1.colpito(f1g1_A2, 1);
                     }
                 }
             });
-        }
+
+            /*
+            //per mantenere il colore
+            if(iListener_f1g1.giaSelezionatiF1G1(1)== true){
+                if (!A2){
+                    iListener_f1g1.nonColpito(f1g1_A2,1);
+                }else {
+                    iListener_f1g1.colpito(f1g1_A2, 1);
+                }
+            }
+            */
 
         f1g1_A3.setOnClickListener(new View.OnClickListener() {
             @Override

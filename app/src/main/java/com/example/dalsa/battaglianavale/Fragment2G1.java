@@ -9,6 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import static com.example.dalsa.battaglianavale.Main2Activity.SELEZIONATO;
+import static com.example.dalsa.battaglianavale.Main2Activity.SELEZIONATO2;
+
 public class Fragment2G1 extends Fragment {
 
     interfaceFragment iListener_f2g1;
@@ -29,6 +32,12 @@ public class Fragment2G1 extends Fragment {
         public void indietro_f2g1();
 
         public void selezionatoTrue_f2g1(int i);
+
+        public void avanti_f2g1();
+
+        public void setTextAct_f2g1();
+
+
     }
 
     @Nullable
@@ -37,13 +46,29 @@ public class Fragment2G1 extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment2g1, null);
 
-        Button btn_indietro_f2g1 = view.findViewById(R.id.btn_indietro_f2g1);
+        final Button btn_indietro_f2g1 = view.findViewById(R.id.btn_indietro_f2g1);
         btn_indietro_f2g1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 iListener_f2g1.indietro_f2g1();
+
             }
         });
+
+        final Button btn_avanti_f2g1 = view.findViewById(R.id.btn_avanti_f2g1);
+        btn_avanti_f2g1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                iListener_f2g1.avanti_f2g1();
+                iListener_f2g1.setTextAct_f2g1();
+
+                btn_indietro_f2g1.setVisibility(View.VISIBLE);
+                btn_avanti_f2g1.setVisibility(View.INVISIBLE);
+
+                
+            }
+        });
+
 
         //Creo i bottoni F2G1
         Button f2g1_A1 = view.findViewById(R.id.f2g1_A1);
