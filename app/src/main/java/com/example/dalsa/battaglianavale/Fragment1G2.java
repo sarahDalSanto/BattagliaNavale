@@ -11,8 +11,18 @@ import android.widget.Button;
 
 public class Fragment1G2 extends Fragment {
 
-    boolean A1, A2, A3, A4, A5, A6, A7, B1, B2, B3, B4, B5, B6, B7, C1, C2, C3, C4, C5, C6, C7, D1, D2, D3, D4, D5, D6, D7, E1, E2, E3, E4, E5, E6, E7, F1, F2, F3, F4, F5, F6, F7, G1, G2, G3, G4, G5, G6, G7;
+    boolean A1, A2, A3, A4, A5, A6, A7;
+    boolean B1, B2, B3, B4, B5, B6, B7;
+    boolean C1, C2, C3, C4, C5, C6, C7;
+    boolean D1, D2, D3, D4, D5, D6, D7;
+    boolean E1, E2, E3, E4, E5, E6, E7;
+    boolean F1, F2, F3, F4, F5, F6, F7;
+    boolean G1, G2, G3, G4, G5, G6, G7;
+
     interfaceFragment2 iListener_f1g2;
+
+    //Per salvare il fragment
+    View view;
 
     //Metodo onAttach
     @Override
@@ -44,7 +54,13 @@ public class Fragment1G2 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment1g2, null);
+        //Per salvare il fragment
+        if (view != null) {
+            if ((ViewGroup) view.getParent() != null)
+                ((ViewGroup) view.getParent()).removeView(view);
+            return view;
+        }
+        view = inflater.inflate(R.layout.fragment1g2, container, false);
 
         Button btn_concludiTurno_g2 = view.findViewById(R.id.btn_concludiTurno_g2);
         btn_concludiTurno_g2.setOnClickListener(new View.OnClickListener() {

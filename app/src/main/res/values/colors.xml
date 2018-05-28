@@ -8,6 +8,4 @@
     <color name="colorText_Gray">#292929</color>
     <color name="colorBackground_LightGray">#455A64</color>
     <color name="colorBackground_DarkGray">#263238</color>
-    <color name="colorColpito">#008000</color>
-    <color name="colorNonColpito">#ff0000</color>
 </resources>

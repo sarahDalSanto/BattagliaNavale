@@ -11,8 +11,18 @@ import android.widget.Button;
 
 public class Fragment1G1 extends Fragment {
 
-    boolean A1, A2, A3, A4, A5, A6, A7, B1, B2, B3, B4, B5, B6, B7, C1, C2, C3, C4, C5, C6, C7, D1, D2, D3, D4, D5, D6, D7, E1, E2, E3, E4, E5, E6, E7, F1, F2, F3, F4, F5, F6, F7, G1, G2, G3, G4, G5, G6, G7;
+    boolean A1, A2, A3, A4, A5, A6, A7;
+    boolean B1, B2, B3, B4, B5, B6, B7;
+    boolean C1, C2, C3, C4, C5, C6, C7;
+    boolean D1, D2, D3, D4, D5, D6, D7;
+    boolean E1, E2, E3, E4, E5, E6, E7;
+    boolean F1, F2, F3, F4, F5, F6, F7;
+    boolean G1, G2, G3, G4, G5, G6, G7;
+
     interfaceFragment iListener_f1g1;
+
+    //Per salvare il fragment
+    View view;
 
     //Metodo onAttach
     @Override
@@ -43,14 +53,20 @@ public class Fragment1G1 extends Fragment {
 
         public View nonColpito(View v, int i);
 
-        public boolean giaSelezionatiF1G1(int i);
+        public boolean giaSelezionati_f1g1(int i);
     }
 
     @Nullable
     @Override
     public View onCreateView(final LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment1g1, null);
+        //Per salvare il fragment
+        if (view != null) {
+            if ((ViewGroup) view.getParent() != null)
+                ((ViewGroup) view.getParent()).removeView(view);
+            return view;
+        }
+        view = inflater.inflate(R.layout.fragment1g1, container, false);
 
         Button btn_concludiTurno_g1 = view.findViewById(R.id.btn_concludiTurno_g1);
         btn_concludiTurno_g1.setOnClickListener(new View.OnClickListener() {
@@ -137,25 +153,24 @@ public class Fragment1G1 extends Fragment {
             }
         });
 
+        f1g1_A2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                A2 = iListener_f1g1.selezionato_f1g1(1);
+                iListener_f1g1.giaSelezionati_f1g1(1);
+                funziona(A2);
+                /*
+                if (!A2) {
+                    iListener_f1g1.toastNonColpito_f1g1();
+                    iListener_f1g1.nonColpito(f1g1_A2, 1);
 
-
-
-            f1g1_A2.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    A2 = iListener_f1g1.selezionato_f1g1(1);
-                    iListener_f1g1.giaSelezionatiF1G1(1);
-                    //funziona(A2);
-                    if (!A2) {
-                        iListener_f1g1.toastNonColpito_f1g1();
-                        iListener_f1g1.nonColpito(f1g1_A2, 1);
-
-                    } else {
-                        iListener_f1g1.toastColpito_f1g1();
-                        iListener_f1g1.colpito(f1g1_A2, 1);
-                    }
+                } else {
+                    iListener_f1g1.toastColpito_f1g1();
+                    iListener_f1g1.colpito(f1g1_A2, 1);
                 }
-            });
+                */
+            }
+        });
 
             /*
             //per mantenere il colore

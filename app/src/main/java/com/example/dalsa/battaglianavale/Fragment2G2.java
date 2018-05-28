@@ -11,9 +11,18 @@ import android.widget.Button;
 
 public class Fragment2G2 extends Fragment {
 
-    //Variabile booleana per vedere se è stato selezionato il pulsante
-
     interfaceFragment2 iListener_f2g2;
+
+    Button f2g2_A1, f2g2_A2, f2g2_A3, f2g2_A4, f2g2_A5, f2g2_A6, f2g2_A7;
+    Button f2g2_B1, f2g2_B2, f2g2_B3, f2g2_B4, f2g2_B5, f2g2_B6, f2g2_B7;
+    Button f2g2_C1, f2g2_C2, f2g2_C3, f2g2_C4, f2g2_C5, f2g2_C6, f2g2_C7;
+    Button f2g2_D1, f2g2_D2, f2g2_D3, f2g2_D4, f2g2_D5, f2g2_D6, f2g2_D7;
+    Button f2g2_E1, f2g2_E2, f2g2_E3, f2g2_E4, f2g2_E5, f2g2_E6, f2g2_E7;
+    Button f2g2_F1, f2g2_F2, f2g2_F3, f2g2_F4, f2g2_F5, f2g2_F6, f2g2_F7;
+    Button f2g2_G1, f2g2_G2, f2g2_G3, f2g2_G4, f2g2_G5, f2g2_G6, f2g2_G7;
+
+    //Per salvare il fragment
+    View view;
 
     //Metodo onAttach
     @Override
@@ -41,90 +50,100 @@ public class Fragment2G2 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment2g2, null);
+        //Per salvare il fragment
+        if (view != null) {
+            if ((ViewGroup) view.getParent() != null)
+                ((ViewGroup) view.getParent()).removeView(view);
+            return view;
+        }
+        view = inflater.inflate(R.layout.fragment2g2, container, false);
+
+        //Creo tutti i bottoni F2G2
+        f2g2_A1 = view.findViewById(R.id.f2g2_A1);
+        f2g2_A2 = view.findViewById(R.id.f2g2_A2);
+        f2g2_A3 = view.findViewById(R.id.f2g2_A3);
+        f2g2_A4 = view.findViewById(R.id.f2g2_A4);
+        f2g2_A5 = view.findViewById(R.id.f2g2_A5);
+        f2g2_A6 = view.findViewById(R.id.f2g2_A6);
+        f2g2_A7 = view.findViewById(R.id.f2g2_A7);
+
+        f2g2_B1 = view.findViewById(R.id.f2g2_B1);
+        f2g2_B2 = view.findViewById(R.id.f2g2_B2);
+        f2g2_B3 = view.findViewById(R.id.f2g2_B3);
+        f2g2_B4 = view.findViewById(R.id.f2g2_B4);
+        f2g2_B5 = view.findViewById(R.id.f2g2_B5);
+        f2g2_B6 = view.findViewById(R.id.f2g2_B6);
+        f2g2_B7 = view.findViewById(R.id.f2g2_B7);
+
+        f2g2_C1 = view.findViewById(R.id.f2g2_C1);
+        f2g2_C2 = view.findViewById(R.id.f2g2_C2);
+        f2g2_C3 = view.findViewById(R.id.f2g2_C3);
+        f2g2_C4 = view.findViewById(R.id.f2g2_C4);
+        f2g2_C5 = view.findViewById(R.id.f2g2_C5);
+        f2g2_C6 = view.findViewById(R.id.f2g2_C6);
+        f2g2_C7 = view.findViewById(R.id.f2g2_C7);
+
+        f2g2_D1 = view.findViewById(R.id.f2g2_D1);
+        f2g2_D2 = view.findViewById(R.id.f2g2_D2);
+        f2g2_D3 = view.findViewById(R.id.f2g2_D3);
+        f2g2_D4 = view.findViewById(R.id.f2g2_D4);
+        f2g2_D5 = view.findViewById(R.id.f2g2_D5);
+        f2g2_D6 = view.findViewById(R.id.f2g2_D6);
+        f2g2_D7 = view.findViewById(R.id.f2g2_D7);
+
+        f2g2_E1 = view.findViewById(R.id.f2g2_E1);
+        f2g2_E2 = view.findViewById(R.id.f2g2_E2);
+        f2g2_E3 = view.findViewById(R.id.f2g2_E3);
+        f2g2_E4 = view.findViewById(R.id.f2g2_E4);
+        f2g2_E5 = view.findViewById(R.id.f2g2_E5);
+        f2g2_E6 = view.findViewById(R.id.f2g2_E6);
+        f2g2_E7 = view.findViewById(R.id.f2g2_E7);
+
+        f2g2_F1 = view.findViewById(R.id.f2g2_F1);
+        f2g2_F2 = view.findViewById(R.id.f2g2_F2);
+        f2g2_F3 = view.findViewById(R.id.f2g2_F3);
+        f2g2_F4 = view.findViewById(R.id.f2g2_F4);
+        f2g2_F5 = view.findViewById(R.id.f2g2_F5);
+        f2g2_F6 = view.findViewById(R.id.f2g2_F6);
+        f2g2_F7 = view.findViewById(R.id.f2g2_F7);
+
+        f2g2_G1 = view.findViewById(R.id.f2g2_G1);
+        f2g2_G2 = view.findViewById(R.id.f2g2_G2);
+        f2g2_G3 = view.findViewById(R.id.f2g2_G3);
+        f2g2_G4 = view.findViewById(R.id.f2g2_G4);
+        f2g2_G5 = view.findViewById(R.id.f2g2_G5);
+        f2g2_G6 = view.findViewById(R.id.f2g2_G6);
+        f2g2_G7 = view.findViewById(R.id.f2g2_G7);
 
         final Button btn_indietro_f2g2 = view.findViewById(R.id.btn_indietro_f2g2);
+        final Button btn_avanti_f2g2 = view.findViewById(R.id.btn_avanti_f2g2);
         btn_indietro_f2g2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.indietro_f2g2();
+
             }
         });
 
-        final Button btn_avanti_f2g2 = view.findViewById(R.id.btn_avanti_f2g2);
         btn_avanti_f2g2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.avanti_f2g2();
+                iListener_f2g2.setTextAct_f2g2();
+
                 btn_indietro_f2g2.setVisibility(View.VISIBLE);
                 btn_avanti_f2g2.setVisibility(View.INVISIBLE);
-                iListener_f2g2.setTextAct_f2g2();
+
             }
         });
-
-        //Creo tutti i bottoni F2G2
-        Button f2g2_A1 = view.findViewById(R.id.f2g2_A1);
-        Button f2g2_A2 = view.findViewById(R.id.f2g2_A2);
-        Button f2g2_A3 = view.findViewById(R.id.f2g2_A3);
-        Button f2g2_A4 = view.findViewById(R.id.f2g2_A4);
-        Button f2g2_A5 = view.findViewById(R.id.f2g2_A5);
-        Button f2g2_A6 = view.findViewById(R.id.f2g2_A6);
-        Button f2g2_A7 = view.findViewById(R.id.f2g2_A7);
-
-        Button f2g2_B1 = view.findViewById(R.id.f2g2_B1);
-        Button f2g2_B2 = view.findViewById(R.id.f2g2_B2);
-        Button f2g2_B3 = view.findViewById(R.id.f2g2_B3);
-        Button f2g2_B4 = view.findViewById(R.id.f2g2_B4);
-        Button f2g2_B5 = view.findViewById(R.id.f2g2_B5);
-        Button f2g2_B6 = view.findViewById(R.id.f2g2_B6);
-        Button f2g2_B7 = view.findViewById(R.id.f2g2_B7);
-
-        Button f2g2_C1 = view.findViewById(R.id.f2g2_C1);
-        Button f2g2_C2 = view.findViewById(R.id.f2g2_C2);
-        Button f2g2_C3 = view.findViewById(R.id.f2g2_C3);
-        Button f2g2_C4 = view.findViewById(R.id.f2g2_C4);
-        Button f2g2_C5 = view.findViewById(R.id.f2g2_C5);
-        Button f2g2_C6 = view.findViewById(R.id.f2g2_C6);
-        Button f2g2_C7 = view.findViewById(R.id.f2g2_C7);
-
-        Button f2g2_D1 = view.findViewById(R.id.f2g2_D1);
-        Button f2g2_D2 = view.findViewById(R.id.f2g2_D2);
-        Button f2g2_D3 = view.findViewById(R.id.f2g2_D3);
-        Button f2g2_D4 = view.findViewById(R.id.f2g2_D4);
-        Button f2g2_D5 = view.findViewById(R.id.f2g2_D5);
-        Button f2g2_D6 = view.findViewById(R.id.f2g2_D6);
-        Button f2g2_D7 = view.findViewById(R.id.f2g2_D7);
-
-        Button f2g2_E1 = view.findViewById(R.id.f2g2_E1);
-        Button f2g2_E2 = view.findViewById(R.id.f2g2_E2);
-        Button f2g2_E3 = view.findViewById(R.id.f2g2_E3);
-        Button f2g2_E4 = view.findViewById(R.id.f2g2_E4);
-        Button f2g2_E5 = view.findViewById(R.id.f2g2_E5);
-        Button f2g2_E6 = view.findViewById(R.id.f2g2_E6);
-        Button f2g2_E7 = view.findViewById(R.id.f2g2_E7);
-
-        Button f2g2_F1 = view.findViewById(R.id.f2g2_F1);
-        Button f2g2_F2 = view.findViewById(R.id.f2g2_F2);
-        Button f2g2_F3 = view.findViewById(R.id.f2g2_F3);
-        Button f2g2_F4 = view.findViewById(R.id.f2g2_F4);
-        Button f2g2_F5 = view.findViewById(R.id.f2g2_F5);
-        Button f2g2_F6 = view.findViewById(R.id.f2g2_F6);
-        Button f2g2_F7 = view.findViewById(R.id.f2g2_F7);
-
-        Button f2g2_G1 = view.findViewById(R.id.f2g2_G1);
-        Button f2g2_G2 = view.findViewById(R.id.f2g2_G2);
-        Button f2g2_G3 = view.findViewById(R.id.f2g2_G3);
-        Button f2g2_G4 = view.findViewById(R.id.f2g2_G4);
-        Button f2g2_G5 = view.findViewById(R.id.f2g2_G5);
-        Button f2g2_G6 = view.findViewById(R.id.f2g2_G6);
-        Button f2g2_G7 = view.findViewById(R.id.f2g2_G7);
 
         //Uso i bottoni F2G2
         f2g2_A1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //metodo per far vedere se è stato selezionato
                 iListener_f2g2.selezionatoTrue_f2g2(0);
+                v.setBackgroundResource(R.drawable.my_button_colpito);
+                f2g2_A1.setText("⫸");
             }
         });
 
