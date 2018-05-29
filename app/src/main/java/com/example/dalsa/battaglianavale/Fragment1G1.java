@@ -19,6 +19,14 @@ public class Fragment1G1 extends Fragment {
     boolean F1, F2, F3, F4, F5, F6, F7;
     boolean G1, G2, G3, G4, G5, G6, G7;
 
+    Button f1g1_A1, f1g1_A2, f1g1_A3, f1g1_A4, f1g1_A5, f1g1_A6, f1g1_A7;
+    Button f1g1_B1, f1g1_B2, f1g1_B3, f1g1_B4, f1g1_B5, f1g1_B6, f1g1_B7;
+    Button f1g1_C1, f1g1_C2, f1g1_C3, f1g1_C4, f1g1_C5, f1g1_C6, f1g1_C7;
+    Button f1g1_D1, f1g1_D2, f1g1_D3, f1g1_D4, f1g1_D5, f1g1_D6, f1g1_D7;
+    Button f1g1_E1, f1g1_E2, f1g1_E3, f1g1_E4, f1g1_E5, f1g1_E6, f1g1_E7;
+    Button f1g1_F1, f1g1_F2, f1g1_F3, f1g1_F4, f1g1_F5, f1g1_F6, f1g1_F7;
+    Button f1g1_G1, f1g1_G2, f1g1_G3, f1g1_G4, f1g1_G5, f1g1_G6, f1g1_G7;
+
     interfaceFragment iListener_f1g1;
 
     //Per salvare il fragment
@@ -48,12 +56,6 @@ public class Fragment1G1 extends Fragment {
         public void toastColpito_f1g1();
 
         public void toastNonColpito_f1g1();
-
-        public View colpito(View v, int i);
-
-        public View nonColpito(View v, int i);
-
-        public boolean giaSelezionati_f1g1(int i);
     }
 
     @Nullable
@@ -67,6 +69,63 @@ public class Fragment1G1 extends Fragment {
             return view;
         }
         view = inflater.inflate(R.layout.fragment1g1, container, false);
+
+        //Creo tutti i bottoni F1G1
+        f1g1_A1 = view.findViewById(R.id.f1g1_A1);
+        f1g1_A2 = view.findViewById(R.id.f1g1_A2);
+        f1g1_A3 = view.findViewById(R.id.f1g1_A3);
+        f1g1_A4 = view.findViewById(R.id.f1g1_A4);
+        f1g1_A5 = view.findViewById(R.id.f1g1_A5);
+        f1g1_A6 = view.findViewById(R.id.f1g1_A6);
+        f1g1_A7 = view.findViewById(R.id.f1g1_A7);
+
+        f1g1_B1 = view.findViewById(R.id.f1g1_B1);
+        f1g1_B2 = view.findViewById(R.id.f1g1_B2);
+        f1g1_B3 = view.findViewById(R.id.f1g1_B3);
+        f1g1_B4 = view.findViewById(R.id.f1g1_B4);
+        f1g1_B5 = view.findViewById(R.id.f1g1_B5);
+        f1g1_B6 = view.findViewById(R.id.f1g1_B6);
+        f1g1_B7 = view.findViewById(R.id.f1g1_B7);
+
+        f1g1_C1 = view.findViewById(R.id.f1g1_C1);
+        f1g1_C2 = view.findViewById(R.id.f1g1_C2);
+        f1g1_C3 = view.findViewById(R.id.f1g1_C3);
+        f1g1_C4 = view.findViewById(R.id.f1g1_C4);
+        f1g1_C5 = view.findViewById(R.id.f1g1_C5);
+        f1g1_C6 = view.findViewById(R.id.f1g1_C6);
+        f1g1_C7 = view.findViewById(R.id.f1g1_C7);
+
+        f1g1_D1 = view.findViewById(R.id.f1g1_D1);
+        f1g1_D2 = view.findViewById(R.id.f1g1_D2);
+        f1g1_D3 = view.findViewById(R.id.f1g1_D3);
+        f1g1_D4 = view.findViewById(R.id.f1g1_D4);
+        f1g1_D5 = view.findViewById(R.id.f1g1_D5);
+        f1g1_D6 = view.findViewById(R.id.f1g1_D6);
+        f1g1_D7 = view.findViewById(R.id.f1g1_D7);
+
+        f1g1_E1 = view.findViewById(R.id.f1g1_E1);
+        f1g1_E2 = view.findViewById(R.id.f1g1_E2);
+        f1g1_E3 = view.findViewById(R.id.f1g1_E3);
+        f1g1_E4 = view.findViewById(R.id.f1g1_E4);
+        f1g1_E5 = view.findViewById(R.id.f1g1_E5);
+        f1g1_E6 = view.findViewById(R.id.f1g1_E6);
+        f1g1_E7 = view.findViewById(R.id.f1g1_E7);
+
+        f1g1_F1 = view.findViewById(R.id.f1g1_F1);
+        f1g1_F2 = view.findViewById(R.id.f1g1_F2);
+        f1g1_F3 = view.findViewById(R.id.f1g1_F3);
+        f1g1_F4 = view.findViewById(R.id.f1g1_F4);
+        f1g1_F5 = view.findViewById(R.id.f1g1_F5);
+        f1g1_F6 = view.findViewById(R.id.f1g1_F6);
+        f1g1_F7 = view.findViewById(R.id.f1g1_F7);
+
+        f1g1_G1 = view.findViewById(R.id.f1g1_G1);
+        f1g1_G2 = view.findViewById(R.id.f1g1_G2);
+        f1g1_G3 = view.findViewById(R.id.f1g1_G3);
+        f1g1_G4 = view.findViewById(R.id.f1g1_G4);
+        f1g1_G5 = view.findViewById(R.id.f1g1_G5);
+        f1g1_G6 = view.findViewById(R.id.f1g1_G6);
+        f1g1_G7 = view.findViewById(R.id.f1g1_G7);
 
         Button btn_concludiTurno_g1 = view.findViewById(R.id.btn_concludiTurno_g1);
         btn_concludiTurno_g1.setOnClickListener(new View.OnClickListener() {
@@ -86,70 +145,13 @@ public class Fragment1G1 extends Fragment {
             }
         });
 
-        //Creo tutti i bottoni F1G1
-        Button f1g1_A1 = view.findViewById(R.id.f1g1_A1);
-        final Button f1g1_A2 = view.findViewById(R.id.f1g1_A2);
-        Button f1g1_A3 = view.findViewById(R.id.f1g1_A3);
-        Button f1g1_A4 = view.findViewById(R.id.f1g1_A4);
-        Button f1g1_A5 = view.findViewById(R.id.f1g1_A5);
-        Button f1g1_A6 = view.findViewById(R.id.f1g1_A6);
-        Button f1g1_A7 = view.findViewById(R.id.f1g1_A7);
-
-        Button f1g1_B1 = view.findViewById(R.id.f1g1_B1);
-        Button f1g1_B2 = view.findViewById(R.id.f1g1_B2);
-        Button f1g1_B3 = view.findViewById(R.id.f1g1_B3);
-        Button f1g1_B4 = view.findViewById(R.id.f1g1_B4);
-        Button f1g1_B5 = view.findViewById(R.id.f1g1_B5);
-        Button f1g1_B6 = view.findViewById(R.id.f1g1_B6);
-        Button f1g1_B7 = view.findViewById(R.id.f1g1_B7);
-
-        Button f1g1_C1 = view.findViewById(R.id.f1g1_C1);
-        Button f1g1_C2 = view.findViewById(R.id.f1g1_C2);
-        Button f1g1_C3 = view.findViewById(R.id.f1g1_C3);
-        Button f1g1_C4 = view.findViewById(R.id.f1g1_C4);
-        Button f1g1_C5 = view.findViewById(R.id.f1g1_C5);
-        Button f1g1_C6 = view.findViewById(R.id.f1g1_C6);
-        Button f1g1_C7 = view.findViewById(R.id.f1g1_C7);
-
-        Button f1g1_D1 = view.findViewById(R.id.f1g1_D1);
-        Button f1g1_D2 = view.findViewById(R.id.f1g1_D2);
-        Button f1g1_D3 = view.findViewById(R.id.f1g1_D3);
-        Button f1g1_D4 = view.findViewById(R.id.f1g1_D4);
-        Button f1g1_D5 = view.findViewById(R.id.f1g1_D5);
-        Button f1g1_D6 = view.findViewById(R.id.f1g1_D6);
-        Button f1g1_D7 = view.findViewById(R.id.f1g1_D7);
-
-        Button f1g1_E1 = view.findViewById(R.id.f1g1_E1);
-        Button f1g1_E2 = view.findViewById(R.id.f1g1_E2);
-        Button f1g1_E3 = view.findViewById(R.id.f1g1_E3);
-        Button f1g1_E4 = view.findViewById(R.id.f1g1_E4);
-        Button f1g1_E5 = view.findViewById(R.id.f1g1_E5);
-        Button f1g1_E6 = view.findViewById(R.id.f1g1_E6);
-        Button f1g1_E7 = view.findViewById(R.id.f1g1_E7);
-
-        Button f1g1_F1 = view.findViewById(R.id.f1g1_F1);
-        Button f1g1_F2 = view.findViewById(R.id.f1g1_F2);
-        Button f1g1_F3 = view.findViewById(R.id.f1g1_F3);
-        Button f1g1_F4 = view.findViewById(R.id.f1g1_F4);
-        Button f1g1_F5 = view.findViewById(R.id.f1g1_F5);
-        Button f1g1_F6 = view.findViewById(R.id.f1g1_F6);
-        Button f1g1_F7 = view.findViewById(R.id.f1g1_F7);
-
-        Button f1g1_G1 = view.findViewById(R.id.f1g1_G1);
-        Button f1g1_G2 = view.findViewById(R.id.f1g1_G2);
-        Button f1g1_G3 = view.findViewById(R.id.f1g1_G3);
-        Button f1g1_G4 = view.findViewById(R.id.f1g1_G4);
-        Button f1g1_G5 = view.findViewById(R.id.f1g1_G5);
-        Button f1g1_G6 = view.findViewById(R.id.f1g1_G6);
-        Button f1g1_G7 = view.findViewById(R.id.f1g1_G7);
-
         //Uso i bottoni F1G1
         f1g1_A1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //metodo per controllare se f2g2_A1 è selezionato o no
+                //Metodo per controllare se f2g2_A1 è selezionato o no
                 A1 = iListener_f1g1.selezionato_f1g1(0);
-                funziona(A1);
+                checkBoat_f1g1(A1, f1g1_A1);
             }
         });
 
@@ -157,37 +159,16 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 A2 = iListener_f1g1.selezionato_f1g1(1);
-                iListener_f1g1.giaSelezionati_f1g1(1);
-                funziona(A2);
-                /*
-                if (!A2) {
-                    iListener_f1g1.toastNonColpito_f1g1();
-                    iListener_f1g1.nonColpito(f1g1_A2, 1);
-
-                } else {
-                    iListener_f1g1.toastColpito_f1g1();
-                    iListener_f1g1.colpito(f1g1_A2, 1);
-                }
-                */
+                iListener_f1g1.selezionato_f1g1(1);
+                checkBoat_f1g1(A2, f1g1_A2);
             }
         });
-
-            /*
-            //per mantenere il colore
-            if(iListener_f1g1.giaSelezionatiF1G1(1)== true){
-                if (!A2){
-                    iListener_f1g1.nonColpito(f1g1_A2,1);
-                }else {
-                    iListener_f1g1.colpito(f1g1_A2, 1);
-                }
-            }
-            */
 
         f1g1_A3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 A3 = iListener_f1g1.selezionato_f1g1(2);
-                funziona(A3);
+                checkBoat_f1g1(A3, f1g1_A3);
             }
         });
 
@@ -195,7 +176,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 A4 = iListener_f1g1.selezionato_f1g1(3);
-                funziona(A4);
+                checkBoat_f1g1(A4, f1g1_A4);
             }
         });
 
@@ -203,7 +184,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 A5 = iListener_f1g1.selezionato_f1g1(4);
-                funziona(A5);
+                checkBoat_f1g1(A5, f1g1_A5);
             }
         });
 
@@ -211,7 +192,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 A6 = iListener_f1g1.selezionato_f1g1(5);
-                funziona(A6);
+                checkBoat_f1g1(A6, f1g1_A6);
             }
         });
 
@@ -219,7 +200,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 A7 = iListener_f1g1.selezionato_f1g1(6);
-                funziona(A7);
+                checkBoat_f1g1(A7, f1g1_A7);
             }
         });
 
@@ -227,7 +208,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 B1 = iListener_f1g1.selezionato_f1g1(7);
-                funziona(B1);
+                checkBoat_f1g1(B1, f1g1_B1);
             }
         });
 
@@ -235,7 +216,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 B2 = iListener_f1g1.selezionato_f1g1(8);
-                funziona(B2);
+                checkBoat_f1g1(B2, f1g1_B2);
             }
         });
 
@@ -243,7 +224,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 B3 = iListener_f1g1.selezionato_f1g1(9);
-                funziona(B3);
+                checkBoat_f1g1(B3, f1g1_B3);
             }
         });
 
@@ -251,7 +232,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 B4 = iListener_f1g1.selezionato_f1g1(10);
-                funziona(B4);
+                checkBoat_f1g1(B4, f1g1_B4);
             }
         });
 
@@ -259,7 +240,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 B5 = iListener_f1g1.selezionato_f1g1(11);
-                funziona(B5);
+                checkBoat_f1g1(B5, f1g1_B5);
             }
         });
 
@@ -267,7 +248,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 B6 = iListener_f1g1.selezionato_f1g1(12);
-                funziona(B6);
+                checkBoat_f1g1(B6, f1g1_B6);
             }
         });
 
@@ -275,7 +256,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 B7 = iListener_f1g1.selezionato_f1g1(13);
-                funziona(B7);
+                checkBoat_f1g1(B7, f1g1_B7);
             }
         });
 
@@ -283,7 +264,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 C1 = iListener_f1g1.selezionato_f1g1(14);
-                funziona(C1);
+                checkBoat_f1g1(C1, f1g1_C1);
             }
         });
 
@@ -291,7 +272,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 C2 = iListener_f1g1.selezionato_f1g1(15);
-                funziona(C2);
+                checkBoat_f1g1(C2, f1g1_C2);
             }
         });
 
@@ -299,7 +280,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 C3 = iListener_f1g1.selezionato_f1g1(16);
-                funziona(C3);
+                checkBoat_f1g1(C3, f1g1_C3);
             }
         });
 
@@ -307,7 +288,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 C4 = iListener_f1g1.selezionato_f1g1(17);
-                funziona(C4);
+                checkBoat_f1g1(C4, f1g1_C4);
             }
         });
 
@@ -315,7 +296,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 C5 = iListener_f1g1.selezionato_f1g1(18);
-                funziona(C5);
+                checkBoat_f1g1(C5, f1g1_C5);
             }
         });
 
@@ -323,7 +304,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 C6 = iListener_f1g1.selezionato_f1g1(19);
-                funziona(C6);
+                checkBoat_f1g1(C6, f1g1_C6);
             }
         });
 
@@ -331,7 +312,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 C7 = iListener_f1g1.selezionato_f1g1(20);
-                funziona(C7);
+                checkBoat_f1g1(C7, f1g1_C7);
             }
         });
 
@@ -339,7 +320,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 D1 = iListener_f1g1.selezionato_f1g1(21);
-                funziona(D1);
+                checkBoat_f1g1(D1, f1g1_D1);
             }
         });
 
@@ -347,7 +328,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 D2 = iListener_f1g1.selezionato_f1g1(22);
-                funziona(D2);
+                checkBoat_f1g1(D2, f1g1_D2);
             }
         });
 
@@ -355,7 +336,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 D3 = iListener_f1g1.selezionato_f1g1(23);
-                funziona(D3);
+                checkBoat_f1g1(D3, f1g1_D3);
             }
         });
 
@@ -363,7 +344,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 D4 = iListener_f1g1.selezionato_f1g1(24);
-                funziona(D4);
+                checkBoat_f1g1(D4, f1g1_D4);
             }
         });
 
@@ -371,7 +352,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 D5 = iListener_f1g1.selezionato_f1g1(25);
-                funziona(D5);
+                checkBoat_f1g1(D5, f1g1_D5);
             }
         });
 
@@ -379,7 +360,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 D6 = iListener_f1g1.selezionato_f1g1(26);
-                funziona(D6);
+                checkBoat_f1g1(D6, f1g1_D6);
             }
         });
 
@@ -387,7 +368,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 D7 = iListener_f1g1.selezionato_f1g1(27);
-                funziona(D7);
+                checkBoat_f1g1(D7, f1g1_D7);
             }
         });
 
@@ -395,7 +376,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 E1 = iListener_f1g1.selezionato_f1g1(28);
-                funziona(E1);
+                checkBoat_f1g1(E1, f1g1_E1);
             }
         });
 
@@ -403,7 +384,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 E2 = iListener_f1g1.selezionato_f1g1(29);
-                funziona(E2);
+                checkBoat_f1g1(E2, f1g1_E2);
             }
         });
 
@@ -411,7 +392,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 E3 = iListener_f1g1.selezionato_f1g1(30);
-                funziona(E3);
+                checkBoat_f1g1(E3, f1g1_E3);
             }
         });
 
@@ -419,7 +400,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 E4 = iListener_f1g1.selezionato_f1g1(31);
-                funziona(E4);
+                checkBoat_f1g1(E4, f1g1_E4);
             }
         });
 
@@ -427,7 +408,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 E5 = iListener_f1g1.selezionato_f1g1(32);
-                funziona(E5);
+                checkBoat_f1g1(E5, f1g1_E5);
             }
         });
 
@@ -435,7 +416,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 E6 = iListener_f1g1.selezionato_f1g1(33);
-                funziona(E6);
+                checkBoat_f1g1(E6, f1g1_E6);
             }
         });
 
@@ -443,7 +424,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 E7 = iListener_f1g1.selezionato_f1g1(34);
-                funziona(E7);
+                checkBoat_f1g1(E7, f1g1_E7);
             }
         });
 
@@ -451,7 +432,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 F1 = iListener_f1g1.selezionato_f1g1(35);
-                funziona(F1);
+                checkBoat_f1g1(F1, f1g1_F1);
             }
         });
 
@@ -459,7 +440,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 F2 = iListener_f1g1.selezionato_f1g1(36);
-                funziona(F2);
+                checkBoat_f1g1(F2, f1g1_F2);
             }
         });
 
@@ -467,7 +448,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 F3 = iListener_f1g1.selezionato_f1g1(37);
-                funziona(F3);
+                checkBoat_f1g1(F3, f1g1_F3);
             }
         });
 
@@ -475,7 +456,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 F4 = iListener_f1g1.selezionato_f1g1(38);
-                funziona(F4);
+                checkBoat_f1g1(F4, f1g1_F4);
             }
         });
 
@@ -483,7 +464,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 F5 = iListener_f1g1.selezionato_f1g1(39);
-                funziona(F5);
+                checkBoat_f1g1(F5, f1g1_F5);
             }
         });
 
@@ -491,7 +472,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 F6 = iListener_f1g1.selezionato_f1g1(40);
-                funziona(F6);
+                checkBoat_f1g1(F6, f1g1_F6);
             }
         });
 
@@ -499,7 +480,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 F7 = iListener_f1g1.selezionato_f1g1(41);
-                funziona(F7);
+                checkBoat_f1g1(F7, f1g1_F7);
             }
         });
 
@@ -507,7 +488,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 G1 = iListener_f1g1.selezionato_f1g1(42);
-                funziona(G1);
+                checkBoat_f1g1(G1, f1g1_G1);
             }
         });
 
@@ -515,7 +496,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 G2 = iListener_f1g1.selezionato_f1g1(43);
-                funziona(G2);
+                checkBoat_f1g1(G2, f1g1_G2);
             }
         });
 
@@ -523,7 +504,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 G3 = iListener_f1g1.selezionato_f1g1(44);
-                funziona(G3);
+                checkBoat_f1g1(G3, f1g1_G3);
             }
         });
 
@@ -531,7 +512,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 G4 = iListener_f1g1.selezionato_f1g1(45);
-                funziona(G4);
+                checkBoat_f1g1(G4, f1g1_G4);
             }
         });
 
@@ -539,7 +520,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 G5 = iListener_f1g1.selezionato_f1g1(46);
-                funziona(G5);
+                checkBoat_f1g1(G5, f1g1_G5);
             }
         });
 
@@ -547,7 +528,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 G6 = iListener_f1g1.selezionato_f1g1(47);
-                funziona(G6);
+                checkBoat_f1g1(G6, f1g1_G6);
             }
         });
 
@@ -555,7 +536,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 G7 = iListener_f1g1.selezionato_f1g1(48);
-                funziona(G7);
+                checkBoat_f1g1(G7, f1g1_G7);
             }
         });
 
@@ -563,11 +544,23 @@ public class Fragment1G1 extends Fragment {
     }
 
     //Metodo da mettere su ogni pulsante
-    public void funziona(boolean b) {
+    public void checkBoat_f1g1(boolean b, Button btn) {
         if (!b) {
             iListener_f1g1.toastNonColpito_f1g1();
+            setBackgroundNonColpito_f1g1(btn);
         } else {
             iListener_f1g1.toastColpito_f1g1();
+            setBackgroundColpito_f1g1(btn);
         }
+    }
+
+    public Button setBackgroundColpito_f1g1(Button b) {
+        b.setBackgroundResource(R.drawable.my_button_colpito);
+        return b;
+    }
+
+    public Button setBackgroundNonColpito_f1g1(Button b) {
+        b.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+        return b;
     }
 }

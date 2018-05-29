@@ -15,7 +15,7 @@
         android:layout_marginRight="8dp"
         android:layout_weight="1"
         android:background="@drawable/my_button_blue"
-        android:text="Avanti"
+        android:text="Go Forward"
         android:textColor="@color/colorText_White"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,7 +30,7 @@
         android:layout_marginRight="8dp"
         android:layout_weight="1"
         android:background="@drawable/my_button_blue"
-        android:text="Indietro"
+        android:text="Go Back"
         android:textColor="@color/colorText_White"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -672,13 +672,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:gravity="center"
-            android:text="QUESTE SONO LE TUE BARCHE"
+            android:text="THESE ARE YOUR SHIPS"
             android:textColor="@color/colorText_White"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/mieBarche"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
     </android.support.constraint.ConstraintLayout>
 

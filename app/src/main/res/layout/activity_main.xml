@@ -15,7 +15,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:gravity="center"
-        android:text="Creato da: \n Sarah Dal Santo e Leonardo De Benetti \n© 2018 Copyright. All rights reserved."
+        android:text="Created by: \n Sarah Dal Santo and Leonardo De Benetti \n© 2018 Copyright. All rights reserved."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -35,7 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Benvenuto in BattleShip Players!"
+            android:text="Welcome in BattleShip Players!"
             android:textColor="@color/colorText_White"
             android:textSize="20dp" />
 
@@ -51,7 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="inserisci i nomi dei giocatori:"
+            android:text="insert players names below:"
             android:textColor="@color/colorPrimary"
             android:textSize="20sp" />
 
@@ -68,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_weight="2"
-                android:text="Squadra Dark:"
+                android:text="Team Dark:"
                 android:textColor="@color/colorText_White"
                 android:textSize="16dp"
                 android:textStyle="bold" />
@@ -82,7 +82,7 @@
                 android:ems="10"
                 android:gravity="left|center"
                 android:inputType="textPersonName"
-                android:text="Player Uno"
+                android:text="Player One"
                 android:textColor="@color/colorText_White"
                 android:textSize="15dp" />
         </LinearLayout>
@@ -100,7 +100,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
                 android:layout_weight="2"
-                android:text="Squadra Light:"
+                android:text="Team Light:"
                 android:textColor="@color/colorText_White"
                 android:textSize="16dp"
                 android:textStyle="bold" />
@@ -114,18 +114,28 @@
                 android:ems="10"
                 android:gravity="left|center"
                 android:inputType="textPersonName"
-                android:text="Player Due"
+                android:text="Player Two"
                 android:textColor="@color/colorText_White"
                 android:textSize="15dp" />
         </LinearLayout>
 
         <Button
-            android:id="@+id/btn"
+            android:id="@+id/btn_iniziaPartita"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/my_button_blue"
-            android:text="Inizia Partita"
+            android:text="Start Game"
+            android:textColor="@color/colorText_White" />
+
+        <Button
+            android:id="@+id/btn_comeSiGioca"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/my_button_blue"
+            android:text="How To Play?"
             android:textColor="@color/colorText_White" />
 
     </LinearLayout>
