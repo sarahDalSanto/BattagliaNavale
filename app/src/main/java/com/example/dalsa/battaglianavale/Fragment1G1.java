@@ -555,12 +555,12 @@ public class Fragment1G1 extends Fragment {
     }
 
     public Button setBackgroundColpito_f1g1(Button b) {
-        b.setBackgroundResource(R.drawable.my_button_colpito);
+        b.setBackgroundResource(R.drawable.ship_select_and_found_g1);
         return b;
     }
 
     public Button setBackgroundNonColpito_f1g1(Button b) {
-        b.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+        b.setBackgroundColor(getResources().getColor(R.color.colorText_White));
         return b;
     }
 }

@@ -142,8 +142,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(0);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_A1.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_A1.setText("");
             }
         });
 
@@ -151,8 +151,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(1);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_A2.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_A2.setText("");
             }
         });
 
@@ -160,8 +160,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(2);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_A3.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_A3.setText("");
             }
         });
 
@@ -169,8 +169,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(3);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_A4.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_A4.setText("");
             }
         });
 
@@ -178,8 +178,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(4);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_A5.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_A5.setText("");
             }
         });
 
@@ -187,8 +187,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(5);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_A6.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_A6.setText("");
             }
         });
 
@@ -196,8 +196,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(6);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_A7.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_A7.setText("");
             }
         });
 
@@ -205,8 +205,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(7);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_B1.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_B1.setText("");
             }
         });
 
@@ -214,8 +214,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(8);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_B2.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_B2.setText("");
             }
         });
 
@@ -223,8 +223,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(9);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_B3.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_B3.setText("");
             }
         });
 
@@ -232,8 +232,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(10);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_B4.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_B4.setText("");
             }
         });
 
@@ -241,8 +241,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(11);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_B5.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_B5.setText("");
             }
         });
 
@@ -250,8 +250,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(12);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_B6.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_B6.setText("");
             }
         });
 
@@ -259,8 +259,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(13);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_B7.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_B7.setText("");
             }
         });
 
@@ -268,8 +268,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(14);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_C1.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_C1.setText("");
             }
         });
 
@@ -277,8 +277,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(15);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_C2.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_C2.setText("");
             }
         });
 
@@ -286,8 +286,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(16);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_C3.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_C3.setText("");
             }
         });
 
@@ -295,8 +295,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(17);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_C4.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_C4.setText("");
             }
         });
 
@@ -304,8 +304,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(18);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_C5.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_C5.setText("");
             }
         });
 
@@ -313,8 +313,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(19);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_C6.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_C6.setText("");
             }
         });
 
@@ -322,8 +322,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(20);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_C7.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_C7.setText("");
             }
         });
 
@@ -331,8 +331,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(21);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_D1.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_D1.setText("");
             }
         });
 
@@ -340,8 +340,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(22);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_D2.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_D2.setText("");
             }
         });
 
@@ -349,8 +349,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(23);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_D3.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_D3.setText("");
             }
         });
 
@@ -358,8 +358,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(24);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_D4.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_D4.setText("");
             }
         });
 
@@ -367,8 +367,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(25);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_D5.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_D5.setText("");
             }
         });
 
@@ -376,8 +376,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(26);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_D6.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_D6.setText("");
             }
         });
 
@@ -385,8 +385,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(27);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_D7.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_D7.setText("");
             }
         });
 
@@ -394,8 +394,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(28);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_E1.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_E1.setText("");
             }
         });
 
@@ -403,8 +403,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(29);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_E2.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_E2.setText("");
             }
         });
 
@@ -412,8 +412,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(30);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_E3.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_E3.setText("");
             }
         });
 
@@ -421,8 +421,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(31);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_E4.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_E4.setText("");
             }
         });
 
@@ -430,8 +430,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(32);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_E5.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_E5.setText("");
             }
         });
 
@@ -439,8 +439,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(33);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_E6.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_E6.setText("");
             }
         });
 
@@ -448,8 +448,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(34);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_E7.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_E7.setText("");
             }
         });
 
@@ -457,8 +457,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(35);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_F1.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_F1.setText("");
             }
         });
 
@@ -466,8 +466,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(36);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_F2.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_F2.setText("");
             }
         });
 
@@ -475,8 +475,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(37);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_F3.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_F3.setText("");
             }
         });
 
@@ -484,8 +484,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(38);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_F4.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_F4.setText("");
             }
         });
 
@@ -493,8 +493,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(39);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_F5.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_F5.setText("");
             }
         });
 
@@ -502,8 +502,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(40);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_F6.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_F6.setText("");
             }
         });
 
@@ -511,8 +511,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(41);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_F7.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_F7.setText("");
             }
         });
 
@@ -520,8 +520,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(42);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_G1.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_G1.setText("");
             }
         });
 
@@ -529,8 +529,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(43);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_G2.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_G2.setText("");
             }
         });
 
@@ -538,8 +538,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(44);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_G3.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_G3.setText("");
             }
         });
 
@@ -547,8 +547,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(45);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_G4.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_G4.setText("");
             }
         });
 
@@ -556,8 +556,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(46);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_G5.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_G5.setText("");
             }
         });
 
@@ -565,8 +565,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(47);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_G6.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_G6.setText("");
             }
         });
 
@@ -574,8 +574,8 @@ public class Fragment2G2 extends Fragment {
             @Override
             public void onClick(View v) {
                 iListener_f2g2.selezionatoTrue_f2g2(48);
-                v.setBackgroundResource(R.drawable.my_button_colpito);
-                f2g2_G7.setText("⫸");
+                v.setBackgroundResource(R.drawable.ship_select_and_found_g2);
+                f2g2_G7.setText("");
             }
         });
 

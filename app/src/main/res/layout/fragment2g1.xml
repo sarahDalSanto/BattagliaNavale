@@ -66,6 +66,7 @@
                 android:layout_width="44dp"
                 android:layout_height="44dp"
                 android:background="@drawable/my_button_g1"
+                android:icon="@drawable/ship_selected_dark"
                 android:textColor="@color/colorText_Gray"
                 app:layout_column="4"
                 app:layout_row="7" />
