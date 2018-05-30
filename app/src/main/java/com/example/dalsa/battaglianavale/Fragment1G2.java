@@ -9,9 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDialogFragment{
+public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDialogFragment {
 
-    int contaTrue=0;
+    int contaBarche_f1g2 = 0;
 
     boolean A1, A2, A3, A4, A5, A6, A7;
     boolean B1, B2, B3, B4, B5, B6, B7;
@@ -46,7 +46,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
     }
 
     @Override
-    public void startNewActivity() {}
+    public void startNewActivity() {
+    }
 
     //Interfaccia
     public interface interfaceFragment2 {
@@ -63,7 +64,6 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
         public void toastNonColpito_f1g2();
 
         public void createDialog_f1g2();
-
     }
 
     @Nullable
@@ -159,8 +159,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 A1 = iListener_f1g2.selezionato_f1g2(0);
-                 checkBoat_f1g2(A1, f1g2_A1);
-                 winner_f1g2();
+                checkBoat_f1g2(A1, f1g2_A1);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -169,8 +169,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             public void onClick(View v) {
                 //Metodo per controllare se f2g1_A1 è selezionato o no
                 A2 = iListener_f1g2.selezionato_f1g2(1);
-                 checkBoat_f1g2(A2, f1g2_A2);
-                winner_f1g2();
+                checkBoat_f1g2(A2, f1g2_A2);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -178,8 +178,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 A3 = iListener_f1g2.selezionato_f1g2(2);
-                 checkBoat_f1g2(A3, f1g2_A3);
-                winner_f1g2();
+                checkBoat_f1g2(A3, f1g2_A3);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -187,8 +187,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 A4 = iListener_f1g2.selezionato_f1g2(3);
-                 checkBoat_f1g2(A4, f1g2_A4);
-                winner_f1g2();
+                checkBoat_f1g2(A4, f1g2_A4);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -196,8 +196,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 A5 = iListener_f1g2.selezionato_f1g2(4);
-                 checkBoat_f1g2(A5, f1g2_A5);
-                winner_f1g2();
+                checkBoat_f1g2(A5, f1g2_A5);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -205,8 +205,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 A6 = iListener_f1g2.selezionato_f1g2(5);
-                 checkBoat_f1g2(A6, f1g2_A6);
-                winner_f1g2();
+                checkBoat_f1g2(A6, f1g2_A6);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -214,8 +214,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 A7 = iListener_f1g2.selezionato_f1g2(6);
-                 checkBoat_f1g2(A7, f1g2_A7);
-                winner_f1g2();
+                checkBoat_f1g2(A7, f1g2_A7);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -223,8 +223,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 B1 = iListener_f1g2.selezionato_f1g2(7);
-                 checkBoat_f1g2(B1, f1g2_B1);
-                winner_f1g2();
+                checkBoat_f1g2(B1, f1g2_B1);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -232,8 +232,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 B2 = iListener_f1g2.selezionato_f1g2(8);
-                 checkBoat_f1g2(B2, f1g2_B2);
-                winner_f1g2();
+                checkBoat_f1g2(B2, f1g2_B2);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -241,8 +241,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 B3 = iListener_f1g2.selezionato_f1g2(9);
-                 checkBoat_f1g2(B3, f1g2_B3);
-                winner_f1g2();
+                checkBoat_f1g2(B3, f1g2_B3);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -250,8 +250,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 B4 = iListener_f1g2.selezionato_f1g2(10);
-                 checkBoat_f1g2(B4, f1g2_B4);
-                winner_f1g2();
+                checkBoat_f1g2(B4, f1g2_B4);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -259,8 +259,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 B5 = iListener_f1g2.selezionato_f1g2(11);
-                 checkBoat_f1g2(B5, f1g2_B5);
-                winner_f1g2();
+                checkBoat_f1g2(B5, f1g2_B5);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -268,8 +268,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 B6 = iListener_f1g2.selezionato_f1g2(12);
-                 checkBoat_f1g2(B6, f1g2_B6);
-                winner_f1g2();
+                checkBoat_f1g2(B6, f1g2_B6);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -277,8 +277,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 B7 = iListener_f1g2.selezionato_f1g2(13);
-                 checkBoat_f1g2(B7, f1g2_B7);
-                winner_f1g2();
+                checkBoat_f1g2(B7, f1g2_B7);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -286,8 +286,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 C1 = iListener_f1g2.selezionato_f1g2(14);
-                 checkBoat_f1g2(C1, f1g2_C1);
-                winner_f1g2();
+                checkBoat_f1g2(C1, f1g2_C1);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -295,8 +295,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 C2 = iListener_f1g2.selezionato_f1g2(15);
-                 checkBoat_f1g2(C2, f1g2_C2);
-                winner_f1g2();
+                checkBoat_f1g2(C2, f1g2_C2);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -304,8 +304,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 C3 = iListener_f1g2.selezionato_f1g2(16);
-                 checkBoat_f1g2(C3, f1g2_C3);
-                winner_f1g2();
+                checkBoat_f1g2(C3, f1g2_C3);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -313,8 +313,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 C4 = iListener_f1g2.selezionato_f1g2(17);
-                 checkBoat_f1g2(C4, f1g2_C4);
-                winner_f1g2();
+                checkBoat_f1g2(C4, f1g2_C4);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -322,8 +322,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 C5 = iListener_f1g2.selezionato_f1g2(18);
-                 checkBoat_f1g2(C5, f1g2_C5);
-                winner_f1g2();
+                checkBoat_f1g2(C5, f1g2_C5);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -331,8 +331,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 C6 = iListener_f1g2.selezionato_f1g2(19);
-                 checkBoat_f1g2(C6, f1g2_C6);
-                winner_f1g2();
+                checkBoat_f1g2(C6, f1g2_C6);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -340,8 +340,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 C7 = iListener_f1g2.selezionato_f1g2(20);
-                 checkBoat_f1g2(C7, f1g2_C7);
-                winner_f1g2();
+                checkBoat_f1g2(C7, f1g2_C7);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -349,8 +349,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 D1 = iListener_f1g2.selezionato_f1g2(21);
-                 checkBoat_f1g2(D1, f1g2_D1);
-                winner_f1g2();
+                checkBoat_f1g2(D1, f1g2_D1);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -358,8 +358,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 D2 = iListener_f1g2.selezionato_f1g2(22);
-                 checkBoat_f1g2(D2, f1g2_D2);
-                winner_f1g2();
+                checkBoat_f1g2(D2, f1g2_D2);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -367,8 +367,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 D3 = iListener_f1g2.selezionato_f1g2(23);
-                 checkBoat_f1g2(D3, f1g2_D3);
-                winner_f1g2();
+                checkBoat_f1g2(D3, f1g2_D3);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -376,8 +376,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 D4 = iListener_f1g2.selezionato_f1g2(24);
-                 checkBoat_f1g2(D4, f1g2_D4);
-                winner_f1g2();
+                checkBoat_f1g2(D4, f1g2_D4);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -385,8 +385,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 D5 = iListener_f1g2.selezionato_f1g2(25);
-                 checkBoat_f1g2(D5, f1g2_D5);
-                winner_f1g2();
+                checkBoat_f1g2(D5, f1g2_D5);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -394,8 +394,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 D6 = iListener_f1g2.selezionato_f1g2(26);
-                 checkBoat_f1g2(D6, f1g2_D6);
-                winner_f1g2();
+                checkBoat_f1g2(D6, f1g2_D6);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -403,8 +403,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 D7 = iListener_f1g2.selezionato_f1g2(27);
-                 checkBoat_f1g2(D7, f1g2_D7);
-                winner_f1g2();
+                checkBoat_f1g2(D7, f1g2_D7);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -412,8 +412,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 E1 = iListener_f1g2.selezionato_f1g2(28);
-                 checkBoat_f1g2(E1, f1g2_E1);
-                winner_f1g2();
+                checkBoat_f1g2(E1, f1g2_E1);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -421,8 +421,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 E2 = iListener_f1g2.selezionato_f1g2(29);
-                 checkBoat_f1g2(E2, f1g2_E2);
-                winner_f1g2();
+                checkBoat_f1g2(E2, f1g2_E2);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -430,8 +430,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 E3 = iListener_f1g2.selezionato_f1g2(30);
-                 checkBoat_f1g2(E3, f1g2_E3);
-                winner_f1g2();
+                checkBoat_f1g2(E3, f1g2_E3);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -439,8 +439,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 E4 = iListener_f1g2.selezionato_f1g2(31);
-                 checkBoat_f1g2(E4, f1g2_E4);
-                winner_f1g2();
+                checkBoat_f1g2(E4, f1g2_E4);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -448,8 +448,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 E5 = iListener_f1g2.selezionato_f1g2(32);
-                 checkBoat_f1g2(E5, f1g2_E5);
-                winner_f1g2();
+                checkBoat_f1g2(E5, f1g2_E5);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -457,8 +457,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 E6 = iListener_f1g2.selezionato_f1g2(33);
-                 checkBoat_f1g2(E6, f1g2_E6);
-                winner_f1g2();
+                checkBoat_f1g2(E6, f1g2_E6);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -466,8 +466,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 E7 = iListener_f1g2.selezionato_f1g2(34);
-                 checkBoat_f1g2(E7, f1g2_E7);
-                winner_f1g2();
+                checkBoat_f1g2(E7, f1g2_E7);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -475,8 +475,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 F1 = iListener_f1g2.selezionato_f1g2(35);
-                 checkBoat_f1g2(F1, f1g2_F1);
-                winner_f1g2();
+                checkBoat_f1g2(F1, f1g2_F1);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -484,8 +484,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 F2 = iListener_f1g2.selezionato_f1g2(36);
-                 checkBoat_f1g2(F2, f1g2_F2);
-                winner_f1g2();
+                checkBoat_f1g2(F2, f1g2_F2);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -493,8 +493,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 F3 = iListener_f1g2.selezionato_f1g2(37);
-                 checkBoat_f1g2(F3, f1g2_F3);
-                winner_f1g2();
+                checkBoat_f1g2(F3, f1g2_F3);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -502,8 +502,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 F4 = iListener_f1g2.selezionato_f1g2(38);
-                 checkBoat_f1g2(F4, f1g2_F4);
-                winner_f1g2();
+                checkBoat_f1g2(F4, f1g2_F4);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -511,8 +511,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 F5 = iListener_f1g2.selezionato_f1g2(39);
-                 checkBoat_f1g2(F5, f1g2_F5);
-                winner_f1g2();
+                checkBoat_f1g2(F5, f1g2_F5);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -520,8 +520,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 F6 = iListener_f1g2.selezionato_f1g2(40);
-                 checkBoat_f1g2(F6, f1g2_F6);
-                winner_f1g2();
+                checkBoat_f1g2(F6, f1g2_F6);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -529,8 +529,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 F7 = iListener_f1g2.selezionato_f1g2(41);
-                 checkBoat_f1g2(F7, f1g2_F7);
-                winner_f1g2();
+                checkBoat_f1g2(F7, f1g2_F7);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -538,8 +538,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 G1 = iListener_f1g2.selezionato_f1g2(42);
-                 checkBoat_f1g2(G1, f1g2_G1);
-                winner_f1g2();
+                checkBoat_f1g2(G1, f1g2_G1);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -547,8 +547,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 G2 = iListener_f1g2.selezionato_f1g2(43);
-                 checkBoat_f1g2(G2, f1g2_G2);
-                winner_f1g2();
+                checkBoat_f1g2(G2, f1g2_G2);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -556,8 +556,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 G3 = iListener_f1g2.selezionato_f1g2(44);
-                 checkBoat_f1g2(G3, f1g2_G3);
-                winner_f1g2();
+                checkBoat_f1g2(G3, f1g2_G3);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -565,8 +565,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 G4 = iListener_f1g2.selezionato_f1g2(45);
-                 checkBoat_f1g2(G4, f1g2_G4);
-                winner_f1g2();
+                checkBoat_f1g2(G4, f1g2_G4);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -574,8 +574,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 G5 = iListener_f1g2.selezionato_f1g2(46);
-                 checkBoat_f1g2(G5, f1g2_G5);
-                winner_f1g2();
+                checkBoat_f1g2(G5, f1g2_G5);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -583,8 +583,8 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 G6 = iListener_f1g2.selezionato_f1g2(47);
-                 checkBoat_f1g2(G6, f1g2_G6);
-                winner_f1g2();
+                checkBoat_f1g2(G6, f1g2_G6);
+                metodoContaBarche_f1g2();
             }
         });
 
@@ -592,23 +592,23 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View v) {
                 G7 = iListener_f1g2.selezionato_f1g2(48);
-                 checkBoat_f1g2(G7, f1g2_G7);
-                winner_f1g2();
+                checkBoat_f1g2(G7, f1g2_G7);
+                metodoContaBarche_f1g2();
             }
         });
 
         return view;
     }
 
-    public void winner_f1g2(){
-        if (contaTrue == 5) {
-           // per fare il dialog fragment
-           iListener_f1g2.createDialog_f1g2();
-        } 
+    public void metodoContaBarche_f1g2() {
+        if (contaBarche_f1g2 == 5) {
+            // per fare il dialog fragment
+            iListener_f1g2.createDialog_f1g2();
+        }
     }
 
     //Metodo da mettere su ogni pulsante
-    public void  checkBoat_f1g2(boolean b, Button btn) {
+    public void checkBoat_f1g2(boolean b, Button btn) {
         if (!b) {
             iListener_f1g2.toastNonColpito_f1g2();
             setBackgroundNonColpito_f1g2(btn);
@@ -616,7 +616,7 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
         } else {
             iListener_f1g2.toastColpito_f1g2();
             setBackgroundColpito_f1g2(btn);
-            contaTrue++;
+            contaBarche_f1g2++;
         }
         btn.setEnabled(false);
     }

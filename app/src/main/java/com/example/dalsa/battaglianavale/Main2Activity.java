@@ -219,19 +219,18 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
         transaction.commit();
     }
 
-    //dialog fragment vittoria
-    @Override
-    public void createDialog_f1g1(){
-        DialogFragmentVittoria dialog = new DialogFragmentVittoria("HAI VINTO!!!!","iniziare una nuova partita?");
-        dialog.show(getFragmentManager(), "dialog");
-    }
-
     @Override
     public void startNewActivity() {
         Intent intent = new Intent(Main2Activity.this, VittoriaActivity.class);
         startActivity(intent);
     }
 
+    //dialog fragment vittoria
+    @Override
+    public void createDialog_f1g1(){
+        DialogFragmentVittoria dialog = new DialogFragmentVittoria("HAI VINTO!!!!","iniziare una nuova partita?");
+        dialog.show(getFragmentManager(), "dialog");
+    }
 
     @Override
     public void createDialog_f1g2() {
