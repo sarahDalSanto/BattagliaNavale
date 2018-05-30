@@ -232,9 +232,11 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
         startActivity(intent);
     }
 
+
     @Override
     public void createDialog_f1g2() {
         DialogFragmentVittoria dialog = new DialogFragmentVittoria("HAI VINTO!!!!","iniziare una nuova partita?");
         dialog.show(getFragmentManager(), "dialog");
     }
+
 }

@@ -602,10 +602,9 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
 
     public void winner_f1g2(){
         if (contaTrue == 5) {
-            //per fare il dialog fragment
-            iListener_f1g2.createDialog_f1g2();
-        }
-
+           // per fare il dialog fragment
+           iListener_f1g2.createDialog_f1g2();
+        } 
     }
 
     //Metodo da mettere su ogni pulsante

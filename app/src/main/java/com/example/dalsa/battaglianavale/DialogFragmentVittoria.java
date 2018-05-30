@@ -20,7 +20,6 @@ public class DialogFragmentVittoria extends DialogFragment {
 
         public interface IDialogFragment {
             public void startNewActivity();
-
         }
 
         public DialogFragmentVittoria(String aTitle, String aMessage) {
