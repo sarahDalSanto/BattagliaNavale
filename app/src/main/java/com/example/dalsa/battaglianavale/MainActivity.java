@@ -11,34 +11,34 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-
-    Button btn;
-    EditText et_g1, et_g2;
+    Button btn_iniziaPartita, btn_comeSiGioca;
+    EditText et_giocatore1, et_giocatore2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        et_g1 = findViewById(R.id.et_giocatore1);
-        et_g2 = findViewById(R.id.et_giocatore2);
-        btn = findViewById(R.id.btn);
+        et_giocatore1 = findViewById(R.id.et_giocatore1);
+        et_giocatore2 = findViewById(R.id.et_giocatore2);
+        btn_iniziaPartita = findViewById(R.id.btn_iniziaPartita);
+        btn_comeSiGioca = findViewById(R.id.btn_comeSiGioca);
 
-        String nome1 = et_g1.getText()+"";
-        String nome2 = et_g2.getText()+"";
-
-
-
-        btn.setOnClickListener(new View.OnClickListener() {
+        btn_iniziaPartita.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Main2Activity.class);
-                intent.putExtra("numero1", et_g1.getText().toString());
-                intent.putExtra("numero2", et_g2.getText().toString());
+                intent.putExtra("player1", et_giocatore1.getText().toString());
+                intent.putExtra("player2", et_giocatore2.getText().toString());
                 startActivity(intent);
             }
         });
 
-
+        btn_comeSiGioca.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Istruzioni
+            }
+        });
     }
 }
