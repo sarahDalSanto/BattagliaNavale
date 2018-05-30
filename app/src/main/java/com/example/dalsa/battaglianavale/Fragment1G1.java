@@ -9,7 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-public class Fragment1G1 extends Fragment {
+public class Fragment1G1 extends Fragment implements DialogFragmentVittoria.IDialogFragment {
+
+    int contaTrue;
 
     boolean A1, A2, A3, A4, A5, A6, A7;
     boolean B1, B2, B3, B4, B5, B6, B7;
@@ -43,6 +45,11 @@ public class Fragment1G1 extends Fragment {
         }
     }
 
+    //overrido i metodi del MyDialogFragment
+    @Override
+    public void startNewActivity() {}
+
+
     //Interfaccia
     public interface interfaceFragment {
         public void setTextAct_f1g1();
@@ -56,11 +63,17 @@ public class Fragment1G1 extends Fragment {
         public void toastColpito_f1g1();
 
         public void toastNonColpito_f1g1();
+
+        public void createDialog_f1g1();
+
     }
+
 
     @Nullable
     @Override
     public View onCreateView(final LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+
+        contaTrue = 0;
 
         //Per salvare il fragment
         if (view != null) {
@@ -133,7 +146,6 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View view) {
                 iListener_f1g1.setTextAct_f1g1();
                 iListener_f1g1.cambiaFrag_f1g1();
-
             }
         });
 
@@ -152,6 +164,7 @@ public class Fragment1G1 extends Fragment {
                 //Metodo per controllare se f2g2_A1 è selezionato o no
                 A1 = iListener_f1g1.selezionato_f1g1(0);
                 checkBoat_f1g1(A1, f1g1_A1);
+                metodoContaTrue();
             }
         });
 
@@ -161,6 +174,7 @@ public class Fragment1G1 extends Fragment {
                 A2 = iListener_f1g1.selezionato_f1g1(1);
                 iListener_f1g1.selezionato_f1g1(1);
                 checkBoat_f1g1(A2, f1g1_A2);
+                metodoContaTrue();
             }
         });
 
@@ -169,6 +183,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 A3 = iListener_f1g1.selezionato_f1g1(2);
                 checkBoat_f1g1(A3, f1g1_A3);
+                metodoContaTrue();
             }
         });
 
@@ -177,6 +192,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 A4 = iListener_f1g1.selezionato_f1g1(3);
                 checkBoat_f1g1(A4, f1g1_A4);
+                metodoContaTrue();
             }
         });
 
@@ -185,6 +201,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 A5 = iListener_f1g1.selezionato_f1g1(4);
                 checkBoat_f1g1(A5, f1g1_A5);
+                metodoContaTrue();
             }
         });
 
@@ -193,6 +210,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 A6 = iListener_f1g1.selezionato_f1g1(5);
                 checkBoat_f1g1(A6, f1g1_A6);
+                metodoContaTrue();
             }
         });
 
@@ -201,6 +219,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 A7 = iListener_f1g1.selezionato_f1g1(6);
                 checkBoat_f1g1(A7, f1g1_A7);
+                metodoContaTrue();
             }
         });
 
@@ -209,6 +228,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 B1 = iListener_f1g1.selezionato_f1g1(7);
                 checkBoat_f1g1(B1, f1g1_B1);
+                metodoContaTrue();
             }
         });
 
@@ -217,6 +237,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 B2 = iListener_f1g1.selezionato_f1g1(8);
                 checkBoat_f1g1(B2, f1g1_B2);
+                metodoContaTrue();
             }
         });
 
@@ -225,6 +246,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 B3 = iListener_f1g1.selezionato_f1g1(9);
                 checkBoat_f1g1(B3, f1g1_B3);
+                metodoContaTrue();
             }
         });
 
@@ -233,6 +255,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 B4 = iListener_f1g1.selezionato_f1g1(10);
                 checkBoat_f1g1(B4, f1g1_B4);
+                metodoContaTrue();
             }
         });
 
@@ -241,6 +264,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 B5 = iListener_f1g1.selezionato_f1g1(11);
                 checkBoat_f1g1(B5, f1g1_B5);
+                metodoContaTrue();
             }
         });
 
@@ -249,6 +273,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 B6 = iListener_f1g1.selezionato_f1g1(12);
                 checkBoat_f1g1(B6, f1g1_B6);
+                metodoContaTrue();
             }
         });
 
@@ -257,6 +282,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 B7 = iListener_f1g1.selezionato_f1g1(13);
                 checkBoat_f1g1(B7, f1g1_B7);
+                metodoContaTrue();
             }
         });
 
@@ -265,6 +291,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 C1 = iListener_f1g1.selezionato_f1g1(14);
                 checkBoat_f1g1(C1, f1g1_C1);
+                metodoContaTrue();
             }
         });
 
@@ -273,6 +300,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 C2 = iListener_f1g1.selezionato_f1g1(15);
                 checkBoat_f1g1(C2, f1g1_C2);
+                metodoContaTrue();
             }
         });
 
@@ -281,6 +309,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 C3 = iListener_f1g1.selezionato_f1g1(16);
                 checkBoat_f1g1(C3, f1g1_C3);
+                metodoContaTrue();
             }
         });
 
@@ -289,6 +318,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 C4 = iListener_f1g1.selezionato_f1g1(17);
                 checkBoat_f1g1(C4, f1g1_C4);
+                metodoContaTrue();
             }
         });
 
@@ -296,7 +326,7 @@ public class Fragment1G1 extends Fragment {
             @Override
             public void onClick(View v) {
                 C5 = iListener_f1g1.selezionato_f1g1(18);
-                checkBoat_f1g1(C5, f1g1_C5);
+                checkBoat_f1g1(C5, f1g1_C5); metodoContaTrue();
             }
         });
 
@@ -305,6 +335,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 C6 = iListener_f1g1.selezionato_f1g1(19);
                 checkBoat_f1g1(C6, f1g1_C6);
+                metodoContaTrue();
             }
         });
 
@@ -313,6 +344,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 C7 = iListener_f1g1.selezionato_f1g1(20);
                 checkBoat_f1g1(C7, f1g1_C7);
+                metodoContaTrue();
             }
         });
 
@@ -321,6 +353,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 D1 = iListener_f1g1.selezionato_f1g1(21);
                 checkBoat_f1g1(D1, f1g1_D1);
+                metodoContaTrue();
             }
         });
 
@@ -329,6 +362,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 D2 = iListener_f1g1.selezionato_f1g1(22);
                 checkBoat_f1g1(D2, f1g1_D2);
+                metodoContaTrue();
             }
         });
 
@@ -337,6 +371,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 D3 = iListener_f1g1.selezionato_f1g1(23);
                 checkBoat_f1g1(D3, f1g1_D3);
+                metodoContaTrue();
             }
         });
 
@@ -345,6 +380,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 D4 = iListener_f1g1.selezionato_f1g1(24);
                 checkBoat_f1g1(D4, f1g1_D4);
+                metodoContaTrue();
             }
         });
 
@@ -353,6 +389,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 D5 = iListener_f1g1.selezionato_f1g1(25);
                 checkBoat_f1g1(D5, f1g1_D5);
+                metodoContaTrue();
             }
         });
 
@@ -361,6 +398,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 D6 = iListener_f1g1.selezionato_f1g1(26);
                 checkBoat_f1g1(D6, f1g1_D6);
+                metodoContaTrue();
             }
         });
 
@@ -369,6 +407,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 D7 = iListener_f1g1.selezionato_f1g1(27);
                 checkBoat_f1g1(D7, f1g1_D7);
+                metodoContaTrue();
             }
         });
 
@@ -377,6 +416,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 E1 = iListener_f1g1.selezionato_f1g1(28);
                 checkBoat_f1g1(E1, f1g1_E1);
+                metodoContaTrue();
             }
         });
 
@@ -385,6 +425,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 E2 = iListener_f1g1.selezionato_f1g1(29);
                 checkBoat_f1g1(E2, f1g1_E2);
+                metodoContaTrue();
             }
         });
 
@@ -393,6 +434,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 E3 = iListener_f1g1.selezionato_f1g1(30);
                 checkBoat_f1g1(E3, f1g1_E3);
+                metodoContaTrue();
             }
         });
 
@@ -401,6 +443,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 E4 = iListener_f1g1.selezionato_f1g1(31);
                 checkBoat_f1g1(E4, f1g1_E4);
+                metodoContaTrue();
             }
         });
 
@@ -409,6 +452,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 E5 = iListener_f1g1.selezionato_f1g1(32);
                 checkBoat_f1g1(E5, f1g1_E5);
+                metodoContaTrue();
             }
         });
 
@@ -417,6 +461,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 E6 = iListener_f1g1.selezionato_f1g1(33);
                 checkBoat_f1g1(E6, f1g1_E6);
+                metodoContaTrue();
             }
         });
 
@@ -425,6 +470,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 E7 = iListener_f1g1.selezionato_f1g1(34);
                 checkBoat_f1g1(E7, f1g1_E7);
+                metodoContaTrue();
             }
         });
 
@@ -433,6 +479,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 F1 = iListener_f1g1.selezionato_f1g1(35);
                 checkBoat_f1g1(F1, f1g1_F1);
+                metodoContaTrue();
             }
         });
 
@@ -441,6 +488,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 F2 = iListener_f1g1.selezionato_f1g1(36);
                 checkBoat_f1g1(F2, f1g1_F2);
+                metodoContaTrue();
             }
         });
 
@@ -449,6 +497,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 F3 = iListener_f1g1.selezionato_f1g1(37);
                 checkBoat_f1g1(F3, f1g1_F3);
+                metodoContaTrue();
             }
         });
 
@@ -457,6 +506,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 F4 = iListener_f1g1.selezionato_f1g1(38);
                 checkBoat_f1g1(F4, f1g1_F4);
+                metodoContaTrue();
             }
         });
 
@@ -465,6 +515,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 F5 = iListener_f1g1.selezionato_f1g1(39);
                 checkBoat_f1g1(F5, f1g1_F5);
+                metodoContaTrue();
             }
         });
 
@@ -473,6 +524,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 F6 = iListener_f1g1.selezionato_f1g1(40);
                 checkBoat_f1g1(F6, f1g1_F6);
+                metodoContaTrue();
             }
         });
 
@@ -481,6 +533,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 F7 = iListener_f1g1.selezionato_f1g1(41);
                 checkBoat_f1g1(F7, f1g1_F7);
+                metodoContaTrue();
             }
         });
 
@@ -489,6 +542,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 G1 = iListener_f1g1.selezionato_f1g1(42);
                 checkBoat_f1g1(G1, f1g1_G1);
+                metodoContaTrue();
             }
         });
 
@@ -497,6 +551,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 G2 = iListener_f1g1.selezionato_f1g1(43);
                 checkBoat_f1g1(G2, f1g1_G2);
+                metodoContaTrue();
             }
         });
 
@@ -505,6 +560,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 G3 = iListener_f1g1.selezionato_f1g1(44);
                 checkBoat_f1g1(G3, f1g1_G3);
+                metodoContaTrue();
             }
         });
 
@@ -513,6 +569,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 G4 = iListener_f1g1.selezionato_f1g1(45);
                 checkBoat_f1g1(G4, f1g1_G4);
+                metodoContaTrue();
             }
         });
 
@@ -521,6 +578,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 G5 = iListener_f1g1.selezionato_f1g1(46);
                 checkBoat_f1g1(G5, f1g1_G5);
+                metodoContaTrue();
             }
         });
 
@@ -529,6 +587,7 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 G6 = iListener_f1g1.selezionato_f1g1(47);
                 checkBoat_f1g1(G6, f1g1_G6);
+                metodoContaTrue();
             }
         });
 
@@ -537,10 +596,19 @@ public class Fragment1G1 extends Fragment {
             public void onClick(View v) {
                 G7 = iListener_f1g1.selezionato_f1g1(48);
                 checkBoat_f1g1(G7, f1g1_G7);
+                metodoContaTrue();
             }
         });
 
+
         return view;
+    }
+
+    public void metodoContaTrue() {
+        if (contaTrue == 5) {
+            //per fare il dialog fragment
+            iListener_f1g1.createDialog_f1g1();
+        }
     }
 
     //Metodo da mettere su ogni pulsante
@@ -551,7 +619,10 @@ public class Fragment1G1 extends Fragment {
         } else {
             iListener_f1g1.toastColpito_f1g1();
             setBackgroundColpito_f1g1(btn);
+            contaTrue++;
         }
+        //per disabilitare il pulsante una volta schiacciato
+        btn.setEnabled(false);
     }
 
     public Button setBackgroundColpito_f1g1(Button b) {

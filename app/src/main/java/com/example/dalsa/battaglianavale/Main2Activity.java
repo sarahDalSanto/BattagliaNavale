@@ -1,14 +1,13 @@
 package com.example.dalsa.battaglianavale;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
-public class Main2Activity extends AppCompatActivity implements Fragment1G1.interfaceFragment, Fragment1G2.interfaceFragment2, Fragment2G1.interfaceFragment, Fragment2G2.interfaceFragment2 {
+public class Main2Activity extends AppCompatActivity implements Fragment1G1.interfaceFragment, Fragment1G2.interfaceFragment2, Fragment2G1.interfaceFragment, Fragment2G2.interfaceFragment2, DialogFragmentVittoria.IDialogFragment {
 
     Fragment1G1 fragment1g1;
     Fragment2G1 fragment2g1;
@@ -99,6 +98,7 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
         Snackbar.make(findViewById(R.id.container), "You didn't hit anything!", Snackbar.LENGTH_SHORT).show();
     }
 
+
     //Metodo per controllare se è stato selezionato qualcosa F1G2
     @Override
     public boolean selezionato_f1g2(int i) {
@@ -115,6 +115,8 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
     public void toastNonColpito_f1g2() {
         Snackbar.make(findViewById(R.id.container), "You didn't hit anything!", Snackbar.LENGTH_SHORT).show();
     }
+
+
 
     //I metodi overrati dai fragment
     @Override
@@ -189,7 +191,7 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
 
     @Override
     public void indietro_f2g2() {
-        //Per il fragment
+        //Per andare in F1G2
         manager = getSupportFragmentManager();
         final FragmentTransaction transaction = manager.beginTransaction();
         //Replace perchè alrimenti si sovrappone
@@ -209,11 +211,30 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
 
     @Override
     public void avanti_f2g2() {
-        //Per il fragment
+        //Per andare in F1G1
         manager = getSupportFragmentManager();
         final FragmentTransaction transaction = manager.beginTransaction();
         //Replace perchè alrimenti si sovrappone
         transaction.replace(R.id.container, fragment1g1);
         transaction.commit();
+    }
+
+    //dialog fragment vittoria
+    @Override
+    public void createDialog_f1g1(){
+        DialogFragmentVittoria dialog = new DialogFragmentVittoria("HAI VINTO!!!!","iniziare una nuova partita?");
+        dialog.show(getFragmentManager(), "dialog");
+    }
+
+    @Override
+    public void startNewActivity() {
+        Intent intent = new Intent(Main2Activity.this, VittoriaActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void createDialog_f1g2() {
+        DialogFragmentVittoria dialog = new DialogFragmentVittoria("HAI VINTO!!!!","iniziare una nuova partita?");
+        dialog.show(getFragmentManager(), "dialog");
     }
 }
