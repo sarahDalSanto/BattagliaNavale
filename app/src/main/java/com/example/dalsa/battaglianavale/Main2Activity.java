@@ -2,10 +2,12 @@ package com.example.dalsa.battaglianavale;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Main2Activity extends AppCompatActivity implements Fragment1G1.interfaceFragment, Fragment1G2.interfaceFragment2, Fragment2G1.interfaceFragment, Fragment2G2.interfaceFragment2, DialogFragmentVittoria.IDialogFragment {
 
@@ -88,21 +90,15 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
         return selezionatiF2G2[i];
     }
 
-    @Override
-    public void toastColpito_f1g1() {
-        Snackbar.make(findViewById(R.id.container), "You hit a ship!", Snackbar.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void toastNonColpito_f1g1() {
-        Snackbar.make(findViewById(R.id.container), "You didn't hit anything!", Snackbar.LENGTH_SHORT).show();
-    }
-
-
     //Metodo per controllare se è stato selezionato qualcosa F1G2
     @Override
     public boolean selezionato_f1g2(int i) {
         return selezionatiF2G1[i];
+    }
+
+    @Override
+    public void toastColpito_f1g1() {
+        Snackbar.make(findViewById(R.id.container), "You hit a ship!", Snackbar.LENGTH_SHORT).show();
     }
 
     @Override
@@ -112,21 +108,24 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
     }
 
     @Override
+    public void toastNonColpito_f1g1() {
+        Snackbar.make(findViewById(R.id.container), "You didn't hit anything!", Snackbar.LENGTH_SHORT).show();
+    }
+
+    @Override
     public void toastNonColpito_f1g2() {
         Snackbar.make(findViewById(R.id.container), "You didn't hit anything!", Snackbar.LENGTH_SHORT).show();
     }
 
-
-
     //I metodi overrati dai fragment
     @Override
     public void setTextAct_f1g1() {
-        tv_nomeGiocatore.setText("This is your turn " + nomePlayer2+"!");
+        tv_nomeGiocatore.setText("This is your turn " + nomePlayer2 + "!");
     }
 
     @Override
     public void setTextAct_f1g2() {
-        tv_nomeGiocatore.setText("This is your turn " + nomePlayer1+"!");
+        tv_nomeGiocatore.setText("This is your turn " + nomePlayer1 + "!");
     }
 
     @Override
@@ -136,7 +135,17 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
 
     @Override
     public void setTextAct_f2g2() {
-        tv_nomeGiocatore.setText("This is your turn " + nomePlayer1+"!");
+        tv_nomeGiocatore.setText("This is your turn " + nomePlayer1 + "!");
+    }
+
+    @Override
+    public void toastLimiteBarche_f2g1() {
+        Snackbar.make(findViewById(R.id.container), "You must select 12 ships only!", Snackbar.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void toastLimiteBarche_f2g2() {
+        Snackbar.make(findViewById(R.id.container), "You must select 12 ships only!", Snackbar.LENGTH_SHORT).show();
     }
 
     @Override
@@ -225,17 +234,42 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
         startActivity(intent);
     }
 
-    //dialog fragment vittoria
+    //Dialog fragment vittoria
     @Override
-    public void createDialog_f1g1(){
-        DialogFragmentVittoria dialog = new DialogFragmentVittoria("HAI VINTO!!!!","iniziare una nuova partita?");
+    public void createDialog_f1g1() {
+        DialogFragmentVittoria dialog = new DialogFragmentVittoria("HAI VINTO!!!!", "iniziare una nuova partita?");
         dialog.show(getFragmentManager(), "dialog");
+    }
+
+    @Override
+    public void toastCambiaTurno_f1g1() {
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                //Do something after 5s = 5000ms
+                //Snackbar.make(findViewById(R.id.container), "Now end your turn!", Snackbar.LENGTH_SHORT).show();
+                Toast.makeText(getBaseContext(),"Now end your turn!", Toast.LENGTH_SHORT).show();
+            }
+        }, 2000);
+    }
+
+    @Override
+    public void toastCambiaTurno_f1g2() {
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                //Do something after 5s = 5000ms
+                //Snackbar.make(findViewById(R.id.container), "Now end your turn!", Snackbar.LENGTH_SHORT).show();
+                Toast.makeText(getBaseContext(),"Now end your turn!", Toast.LENGTH_SHORT).show();
+            }
+        }, 2000);
     }
 
     @Override
     public void createDialog_f1g2() {
-        DialogFragmentVittoria dialog = new DialogFragmentVittoria("HAI VINTO!!!!","iniziare una nuova partita?");
+        DialogFragmentVittoria dialog = new DialogFragmentVittoria("HAI VINTO!!!!", "iniziare una nuova partita?");
         dialog.show(getFragmentManager(), "dialog");
     }
-
 }

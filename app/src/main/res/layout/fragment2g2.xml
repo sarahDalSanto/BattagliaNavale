@@ -672,7 +672,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:gravity="center"
-            android:text="THESE ARE YOUR SHIPS"
+            android:text="THESE ARE YOUR 12 SHIPS"
             android:textColor="@color/colorText_Gray"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/mieBarche"
