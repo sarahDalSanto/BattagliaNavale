@@ -13,6 +13,7 @@ import android.widget.Button;
 public class Fragment1G1 extends Fragment implements DialogFragmentVittoria.IDialogFragment {
 
     int contaBarche_f1g1 = 0;
+    String nomePlayer1;
 
     boolean A1, A2, A3, A4, A5, A6, A7;
     boolean B1, B2, B3, B4, B5, B6, B7;
@@ -657,8 +658,8 @@ public class Fragment1G1 extends Fragment implements DialogFragmentVittoria.IDia
         if (contaBarche_f1g1 == 12) {
             //Add nome player da passare a Vittoria
             Intent intent = new Intent(getActivity(), VittoriaActivity.class);
-            String nomePlayer1 = iListener_f1g1.passName_f1g1();
-            intent.putExtra("player1", nomePlayer1);
+             nomePlayer1 = iListener_f1g1.passName_f1g1();
+            intent.putExtra("player", nomePlayer1);
             startActivity(intent);
         }
     }
