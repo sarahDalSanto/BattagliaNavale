@@ -166,7 +166,7 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
         startActivity(intent);
 
 
-        //mi sa che queste cose vanno fatte nell'activity splash
+        //mi sa che queste cose vanno fatte nell'activity splash - anche secondo me visto che è una activity sua
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             @Override
             public void run() {
