@@ -3,6 +3,7 @@ package com.example.dalsa.battaglianavale;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -160,10 +161,23 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
     public void cambiaFrag_f1g1() {
         //Per il fragment
         manager = getSupportFragmentManager();
-        final FragmentTransaction transaction = manager.beginTransaction();
-        //Replace perchè alrimenti si sovrappone
-        transaction.replace(R.id.container, fragment1g2);
-        transaction.commit();
+
+        Intent intent = new Intent(Main2Activity.this, SplashActivity.class);
+        startActivity(intent);
+
+
+        //mi sa che queste cose vanno fatte nell'activity splash
+        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                //Do something here
+                final FragmentTransaction transaction = manager.beginTransaction();
+                //Replace perchè alrimenti si sovrappone
+                transaction.replace(R.id.container, fragment1g2);
+                transaction.commit();
+            }
+        }, 5000);
+
     }
 
     @Override
