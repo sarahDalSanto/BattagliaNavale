@@ -116,6 +116,11 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
     }
 
     @Override
+    public String passName_f1g1() {
+        return nomePlayer1;
+    }
+
+    @Override
     public void toastNonColpito_f1g2() {
         Snackbar.make(findViewById(R.id.container), "You didn't hit anything!", Snackbar.LENGTH_SHORT).show();
     }
@@ -256,5 +261,10 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
        dialog2 = new DialogFragmentVittoria("HAI VINTO!!!!", "iniziare una nuova partita?");
         dialog2.show(getFragmentManager(), "dialog2");
         dialog = false;
+    }
+
+    @Override
+    public String passName_f1g2() {
+        return nomePlayer2;
     }
 }

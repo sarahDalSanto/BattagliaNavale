@@ -67,6 +67,8 @@ public class Fragment1G1 extends Fragment implements DialogFragmentVittoria.IDia
 
         public void createDialog_f1g1();
 
+        public String passName_f1g1();
+
     }
 
     @Nullable
@@ -655,6 +657,8 @@ public class Fragment1G1 extends Fragment implements DialogFragmentVittoria.IDia
         if (contaBarche_f1g1 == 12) {
             //Add nome player da passare a Vittoria
             Intent intent = new Intent(getActivity(), VittoriaActivity.class);
+            String nomePlayer1 = iListener_f1g1.passName_f1g1();
+            intent.putExtra("player1", nomePlayer1);
             startActivity(intent);
         }
     }
