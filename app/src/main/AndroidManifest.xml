@@ -21,7 +21,8 @@
         <activity
             android:name=".Main2Activity"
             android:screenOrientation="nosensor" />
-        <activity android:name=".VittoriaActivity"></activity>
+        <activity android:name=".VittoriaActivity" />
+        <activity android:name=".IstruzioniActivity"></activity>
     </application>
 
 </manifest>

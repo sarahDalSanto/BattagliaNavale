@@ -66,7 +66,6 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
 
         public void createDialog_f1g2();
 
-        public void toastCambiaTurno_f1g2();
     }
 
     @Nullable
@@ -732,7 +731,6 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
         f1g2_G5.setClickable(false);
         f1g2_G6.setClickable(false);
         f1g2_G7.setClickable(false);
-        iListener_f1g2.toastCambiaTurno_f1g2();
     }
 
     public void sbloccaButtons_f1g2() {

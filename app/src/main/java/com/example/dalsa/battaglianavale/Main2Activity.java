@@ -16,6 +16,9 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
     Fragment1G2 fragment1g2;
     Fragment2G2 fragment2g2;
 
+    DialogFragmentVittoria dialog1, dialog2;
+    boolean dialog;
+
     String nomePlayer1, nomePlayer2;
     TextView tv_nomeGiocatore;
     android.support.v4.app.FragmentManager manager;
@@ -231,45 +234,27 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
     @Override
     public void startNewActivity() {
         Intent intent = new Intent(Main2Activity.this, VittoriaActivity.class);
+        if(dialog){
+            intent.putExtra("player", nomePlayer1);
+        }else{
+            intent.putExtra("player", nomePlayer2);
+        }
         startActivity(intent);
     }
 
     //Dialog fragment vittoria
     @Override
     public void createDialog_f1g1() {
-        DialogFragmentVittoria dialog = new DialogFragmentVittoria("HAI VINTO!!!!", "iniziare una nuova partita?");
-        dialog.show(getFragmentManager(), "dialog");
+         dialog1 = new DialogFragmentVittoria("HAI VINTO!!!!", "iniziare una nuova partita?");
+        dialog1.show(getFragmentManager(), "dialog1");
+        dialog = true;
     }
 
-    @Override
-    public void toastCambiaTurno_f1g1() {
-        final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                //Do something after 5s = 5000ms
-                //Snackbar.make(findViewById(R.id.container), "Now end your turn!", Snackbar.LENGTH_SHORT).show();
-                Toast.makeText(getBaseContext(),"Now end your turn!", Toast.LENGTH_SHORT).show();
-            }
-        }, 2000);
-    }
-
-    @Override
-    public void toastCambiaTurno_f1g2() {
-        final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                //Do something after 5s = 5000ms
-                //Snackbar.make(findViewById(R.id.container), "Now end your turn!", Snackbar.LENGTH_SHORT).show();
-                Toast.makeText(getBaseContext(),"Now end your turn!", Toast.LENGTH_SHORT).show();
-            }
-        }, 2000);
-    }
 
     @Override
     public void createDialog_f1g2() {
-        DialogFragmentVittoria dialog = new DialogFragmentVittoria("HAI VINTO!!!!", "iniziare una nuova partita?");
-        dialog.show(getFragmentManager(), "dialog");
+       dialog2 = new DialogFragmentVittoria("HAI VINTO!!!!", "iniziare una nuova partita?");
+        dialog2.show(getFragmentManager(), "dialog2");
+        dialog = false;
     }
 }

@@ -5,10 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class VittoriaActivity extends AppCompatActivity {
 
     Button btn_vittoria;
+    String nomePlayer;
+    TextView tv_nomeVincitore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,5 +26,13 @@ public class VittoriaActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        if (getIntent().getExtras() != null) {
+            Bundle bundle = getIntent().getExtras();
+            nomePlayer = bundle.get("player") + "";
+        }
+
+        tv_nomeVincitore = findViewById(R.id.tv_nomeVincitore);
+        tv_nomeVincitore.setText(nomePlayer);
     }
 }

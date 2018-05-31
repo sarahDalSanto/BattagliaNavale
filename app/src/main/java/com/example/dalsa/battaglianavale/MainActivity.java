@@ -37,7 +37,8 @@ public class MainActivity extends AppCompatActivity {
         btn_comeSiGioca.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Istruzioni
+                Intent intent = new Intent(MainActivity.this, IstruzioniActivity.class);
+                startActivity(intent);
             }
         });
     }
