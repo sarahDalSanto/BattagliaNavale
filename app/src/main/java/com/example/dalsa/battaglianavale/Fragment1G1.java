@@ -1,6 +1,7 @@
 package com.example.dalsa.battaglianavale;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -652,8 +653,9 @@ public class Fragment1G1 extends Fragment implements DialogFragmentVittoria.IDia
 
     public void metodoContaBarche_f1g1() {
         if (contaBarche_f1g1 == 12) {
-            //Per fare il dialog fragment
-            iListener_f1g1.createDialog_f1g1();
+            //Add nome player da passare a Vittoria
+            Intent intent = new Intent(getActivity(), VittoriaActivity.class);
+            startActivity(intent);
         }
     }
 
