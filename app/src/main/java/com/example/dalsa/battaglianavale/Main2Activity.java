@@ -265,13 +265,14 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
         dialog = true;
     }
 
-
+    /*
     @Override
     public void createDialog_f1g2() {
        dialog2 = new DialogFragmentVittoria("HAI VINTO!!!!", "iniziare una nuova partita?");
         dialog2.show(getFragmentManager(), "dialog2");
         dialog = false;
     }
+    */
 
     @Override
     public String passName_f1g2() {
