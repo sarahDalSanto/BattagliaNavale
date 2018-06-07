@@ -13,6 +13,7 @@ import android.widget.Button;
 public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDialogFragment {
 
     int contaBarche_f1g2 = 0;
+    boolean frag = false;
     String nomePlayer2;
 
     boolean A1, A2, A3, A4, A5, A6, A7;
@@ -56,7 +57,7 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
     public interface interfaceFragment2 {
         public void setTextAct_f1g2();
 
-        public void cambiaFrag_f1g2();
+        public void cambiaFrag_f1g2(boolean frag);
 
         public void vediBarche_f1g2();
 
@@ -146,7 +147,7 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View view) {
                 iListener_f1g2.setTextAct_f1g2();
-                iListener_f1g2.cambiaFrag_f1g2();
+                iListener_f1g2.cambiaFrag_f1g2(frag);
                 sbloccaButtons_f1g2();
             }
         });

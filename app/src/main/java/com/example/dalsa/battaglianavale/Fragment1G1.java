@@ -14,6 +14,7 @@ public class Fragment1G1 extends Fragment implements DialogFragmentVittoria.IDia
 
     int contaBarche_f1g1 = 0;
     String nomePlayer1;
+    boolean frag = true;
 
     boolean A1, A2, A3, A4, A5, A6, A7;
     boolean B1, B2, B3, B4, B5, B6, B7;
@@ -56,7 +57,7 @@ public class Fragment1G1 extends Fragment implements DialogFragmentVittoria.IDia
     public interface interfaceFragment {
         public void setTextAct_f1g1();
 
-        public void cambiaFrag_f1g1();
+        public void cambiaFrag_f1g1(boolean frag);
 
         public void vediBarche_f1g1();
 
@@ -146,7 +147,7 @@ public class Fragment1G1 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View view) {
                 iListener_f1g1.setTextAct_f1g1();
-                iListener_f1g1.cambiaFrag_f1g1();
+                iListener_f1g1.cambiaFrag_f1g1(frag);
                 sbloccaButtons_f1g1();
             }
         });

@@ -7,10 +7,12 @@ import android.os.Looper;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Main2Activity extends AppCompatActivity implements Fragment1G1.interfaceFragment, Fragment1G2.interfaceFragment2, Fragment2G1.interfaceFragment, Fragment2G2.interfaceFragment2, DialogFragmentVittoria.IDialogFragment {
+public class Main2Activity extends AppCompatActivity implements Fragment1G1.interfaceFragment, Fragment1G2.interfaceFragment2, Fragment2G1.interfaceFragment, Fragment2G2.interfaceFragment2, DialogFragmentVittoria.IDialogFragment, FragIntermedio.interfaceFrag{
 
     Fragment1G1 fragment1g1;
     Fragment2G1 fragment2g1;
@@ -18,7 +20,7 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
     Fragment2G2 fragment2g2;
 
     DialogFragmentVittoria dialog1, dialog2;
-    boolean dialog;
+    boolean dialog, frag;
 
     String nomePlayer1, nomePlayer2;
     TextView tv_nomeGiocatore;
@@ -30,6 +32,8 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
     //Per salvare i calcoli
     public static final String SELEZIONATO_g1 = "SELEZIONATO_G1";
     public static final String SELEZIONATO_g2 = "SELEZIONATO_G2";
+    public static final String FRAG = "frag?";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +71,7 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
         if (savedInstanceState != null) {
             selezionatiF2G2 = savedInstanceState.getBooleanArray(SELEZIONATO_g1);
             selezionatiF2G1 = savedInstanceState.getBooleanArray(SELEZIONATO_g2);
+            frag = savedInstanceState.getBoolean(FRAG);
         }
     }
 
@@ -76,6 +81,7 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
         super.onSaveInstanceState(outState);
         outState.putBooleanArray(SELEZIONATO_g1, selezionatiF2G2);
         outState.putBooleanArray(SELEZIONATO_g1, selezionatiF2G1);
+        outState.putBoolean(FRAG, frag);
     }
 
     //Metodo per i selezionati F2G1
@@ -158,36 +164,26 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
     }
 
     @Override
-    public void cambiaFrag_f1g1() {
-        //Per il fragment
-        manager = getSupportFragmentManager();
+    public void cambiaFrag_f1g1(boolean frag) {
 
-        Intent intent = new Intent(Main2Activity.this, SplashActivity.class);
-        startActivity(intent);
-
-
-        //mi sa che queste cose vanno fatte nell'activity splash
-        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                //Do something here
-                final FragmentTransaction transaction = manager.beginTransaction();
-                //Replace perchè alrimenti si sovrappone
-                transaction.replace(R.id.container, fragment1g2);
-                transaction.commit();
-            }
-        }, 5000);
-
+                    FragIntermedio fi = new FragIntermedio();
+                    manager = getSupportFragmentManager();
+                    final FragmentTransaction transaction = manager.beginTransaction();
+                    //Replace perchè alrimenti si sovrappone
+                    transaction.replace(R.id.container, fi);
+                    transaction.commit();
+                    this.frag = frag;
     }
 
     @Override
-    public void cambiaFrag_f1g2() {
-        //Per il fragment
+    public void cambiaFrag_f1g2(boolean frag) {
+        FragIntermedio fi = new FragIntermedio();
         manager = getSupportFragmentManager();
         final FragmentTransaction transaction = manager.beginTransaction();
         //Replace perchè alrimenti si sovrappone
-        transaction.replace(R.id.container, fragment1g1);
+        transaction.replace(R.id.container, fi);
         transaction.commit();
+        this.frag= frag;
     }
 
     @Override
@@ -280,5 +276,29 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
     @Override
     public String passName_f1g2() {
         return nomePlayer2;
+    }
+
+    @Override
+    public void passaTurno(boolean frag) {
+        if(frag){
+            //Per il fragment
+            manager = getSupportFragmentManager();
+            final FragmentTransaction transaction = manager.beginTransaction();
+            //Replace perchè alrimenti si sovrappone
+            transaction.replace(R.id.container, fragment1g2);
+            transaction.commit();
+        }else{
+            //Per il fragment
+            manager = getSupportFragmentManager();
+            final FragmentTransaction transaction = manager.beginTransaction();
+            //Replace perchè alrimenti si sovrappone
+            transaction.replace(R.id.container, fragment1g1);
+            transaction.commit();
+        }
+    }
+
+    @Override
+    public boolean cheFrag() {
+        return frag;
     }
 }

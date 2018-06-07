@@ -23,7 +23,6 @@
             android:screenOrientation="nosensor" />
         <activity android:name=".VittoriaActivity" />
         <activity android:name=".IstruzioniActivity" />
-        <activity android:name=".SplashActivity"></activity>
     </application>
 
 </manifest>
