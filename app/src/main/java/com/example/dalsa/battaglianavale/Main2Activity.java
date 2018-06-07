@@ -88,6 +88,10 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
     public void selezionatoTrue_f2g1(int i) {
         selezionatiF2G1[i] = true;
     }
+    @Override
+    public void selezionatoFalse(int i) {
+        selezionatiF2G1[i] = false;
+    }
 
     //Metodo per i selezionati F2G2
     public void selezionatoTrue_f2g2(int i) {
@@ -157,6 +161,8 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
     public void toastLimiteBarche_f2g1() {
         Snackbar.make(findViewById(R.id.container), "You must select 12 ships only!", Snackbar.LENGTH_SHORT).show();
     }
+
+
 
     @Override
     public void toastLimiteBarche_f2g2() {

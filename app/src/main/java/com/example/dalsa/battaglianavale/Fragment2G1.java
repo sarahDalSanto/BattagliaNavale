@@ -13,6 +13,15 @@ public class Fragment2G1 extends Fragment {
 
     int contaBarche_f2g1 = 0;
 
+    boolean doppioClickA1=true, doppioClickA2= true, doppioClickA3, doppioClickA4, doppioClickA5, doppioClickA6, doppioClickA7;
+    boolean doppioClickB1, doppioClickB2, doppioClickB3, doppioClickB4, doppioClickB5, doppioClickB6, doppioClickB7;
+    boolean doppioClickC1, doppioClickC2, doppioClickC3, doppioClickC4, doppioClickC5, doppioClickC6, doppioClickC7;
+    boolean doppioClickD1, doppioClickD2, doppioClickD3, doppioClickD4, doppioClickD5, doppioClickD6, doppioClickD7;
+    boolean doppioClickE1, doppioClickE2, doppioClickE3, doppioClickE4, doppioClickE5, doppioClickE6, doppioClickE7;
+    boolean doppioClickF1, doppioClickF2, doppioClickF3, doppioClickF4, doppioClickF5, doppioClickF6, doppioClickF7;
+    boolean doppioClickG1, doppioClickG2, doppioClickG3, doppioClickG4, doppioClickG5, doppioClickG6, doppioClickG7;
+
+
     interfaceFragment iListener_f2g1;
 
     Button f2g1_A1, f2g1_A2, f2g1_A3, f2g1_A4, f2g1_A5, f2g1_A6, f2g1_A7;
@@ -48,6 +57,8 @@ public class Fragment2G1 extends Fragment {
         public void setTextAct_f2g1();
 
         public void toastLimiteBarche_f2g1();
+
+        public  void selezionatoFalse(int i);
     }
 
     @Nullable
@@ -61,6 +72,8 @@ public class Fragment2G1 extends Fragment {
             return view;
         }
         view = inflater.inflate(R.layout.fragment2g1, container, false);
+
+
 
         //Creo i bottoni F2G1
         f2g1_A1 = view.findViewById(R.id.f2g1_A1);
@@ -198,11 +211,19 @@ public class Fragment2G1 extends Fragment {
         f2g1_A1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Metodo per controllare se f2g1_A1 è selezionato o no
-                iListener_f2g1.selezionatoTrue_f2g1(0);
-                v.setBackgroundResource(R.drawable.ship_select_and_found_g1);
-                contaBarche_f2g1++;
-                f2g1_A1.setEnabled(false);
+                if(doppioClickA1) {
+                    //Metodo per controllare se f2g1_A1 è selezionato o no
+                    iListener_f2g1.selezionatoTrue_f2g1(0);
+                    v.setBackgroundResource(R.drawable.ship_select_and_found_g1);
+                    contaBarche_f2g1++;
+                    doppioClickA1 = false;
+                }else{
+                    iListener_f2g1.selezionatoFalse(0);
+                    v.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                    contaBarche_f2g1--;
+                    doppioClickA1 = true;
+                }
+
                 bloccaButtons_f2g1();
             }
         });
@@ -210,11 +231,18 @@ public class Fragment2G1 extends Fragment {
         f2g1_A2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                iListener_f2g1.selezionatoTrue_f2g1(1);
-                v.setBackgroundResource(R.drawable.ship_select_and_found_g1);
-                contaBarche_f2g1++;
-                f2g1_A2.setEnabled(false);
-                bloccaButtons_f2g1();
+                if(doppioClickA2) {
+                    iListener_f2g1.selezionatoTrue_f2g1(1);
+                    v.setBackgroundResource(R.drawable.ship_select_and_found_g1);
+                    contaBarche_f2g1++;
+                    doppioClickA2= false;
+                    bloccaButtons_f2g1();
+                }else{
+                    iListener_f2g1.selezionatoFalse(1);
+                    v.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                    contaBarche_f2g1--;
+                    doppioClickA2 = true;
+                }
             }
         });
 
