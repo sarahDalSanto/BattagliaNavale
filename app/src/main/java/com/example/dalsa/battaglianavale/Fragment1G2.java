@@ -67,7 +67,7 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
 
         public void toastNonColpito_f1g2();
 
-        public void createDialog_f1g2();
+        //public void createDialog_f1g2();
 
         public String passName_f1g2();
 
