@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.dalsa.battaglianavale.MainActivity;
+import com.example.dalsa.battaglianavale.PlayerNameSelect.MainActivity;
 import com.example.dalsa.battaglianavale.R;
 
 public class VittoriaActivity extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package com.example.dalsa.battaglianavale;
+package com.example.dalsa.battaglianavale.PlayerNameSelect;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,7 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.dalsa.battaglianavale.Helpers.IstruzioniActivity;
-import com.example.dalsa.battaglianavale.MainMethod.Main2Activity;
+import com.example.dalsa.battaglianavale.Main2Activity;
+import com.example.dalsa.battaglianavale.R;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.dalsa.battaglianavale.MainMethod;
+package com.example.dalsa.battaglianavale;
 
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
