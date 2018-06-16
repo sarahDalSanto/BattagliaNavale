@@ -30,13 +30,12 @@ public class FragIntermedio extends Fragment {
         }
     }
 
-
     //Interfaccia
     public interface interfaceFrag {
-       public void passaTurno(boolean frag);
-       public boolean cheFrag();
-    }
+        public void passaTurno(boolean frag);
 
+        public boolean cheFrag();
+    }
 
     @Nullable
     @Override
@@ -52,7 +51,6 @@ public class FragIntermedio extends Fragment {
 
         frag = true;
 
-
         btn_intermedio = view.findViewById(R.id.btn_intermedio);
         btn_intermedio.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,9 +60,6 @@ public class FragIntermedio extends Fragment {
             }
         });
 
-
         return view;
-        }
-
-
+    }
 }

@@ -10,29 +10,29 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDialogFragment {
+public class Fragment1G2 extends Fragment {
 
-    int contaBarche_f1g2 = 0;
-    boolean frag = false;
-    String nomePlayer2;
+    private int contaBarche_f1g2 = 0;
+    private boolean frag_f1g2 = false;
+    private String nomePlayer2;
 
-    boolean A1, A2, A3, A4, A5, A6, A7;
-    boolean B1, B2, B3, B4, B5, B6, B7;
-    boolean C1, C2, C3, C4, C5, C6, C7;
-    boolean D1, D2, D3, D4, D5, D6, D7;
-    boolean E1, E2, E3, E4, E5, E6, E7;
-    boolean F1, F2, F3, F4, F5, F6, F7;
-    boolean G1, G2, G3, G4, G5, G6, G7;
+    private boolean A1, A2, A3, A4, A5, A6, A7;
+    private boolean B1, B2, B3, B4, B5, B6, B7;
+    private boolean C1, C2, C3, C4, C5, C6, C7;
+    private boolean D1, D2, D3, D4, D5, D6, D7;
+    private boolean E1, E2, E3, E4, E5, E6, E7;
+    private boolean F1, F2, F3, F4, F5, F6, F7;
+    private boolean G1, G2, G3, G4, G5, G6, G7;
 
-    Button f1g2_A1, f1g2_A2, f1g2_A3, f1g2_A4, f1g2_A5, f1g2_A6, f1g2_A7;
-    Button f1g2_B1, f1g2_B2, f1g2_B3, f1g2_B4, f1g2_B5, f1g2_B6, f1g2_B7;
-    Button f1g2_C1, f1g2_C2, f1g2_C3, f1g2_C4, f1g2_C5, f1g2_C6, f1g2_C7;
-    Button f1g2_D1, f1g2_D2, f1g2_D3, f1g2_D4, f1g2_D5, f1g2_D6, f1g2_D7;
-    Button f1g2_E1, f1g2_E2, f1g2_E3, f1g2_E4, f1g2_E5, f1g2_E6, f1g2_E7;
-    Button f1g2_F1, f1g2_F2, f1g2_F3, f1g2_F4, f1g2_F5, f1g2_F6, f1g2_F7;
-    Button f1g2_G1, f1g2_G2, f1g2_G3, f1g2_G4, f1g2_G5, f1g2_G6, f1g2_G7;
+    private Button f1g2_A1, f1g2_A2, f1g2_A3, f1g2_A4, f1g2_A5, f1g2_A6, f1g2_A7;
+    private Button f1g2_B1, f1g2_B2, f1g2_B3, f1g2_B4, f1g2_B5, f1g2_B6, f1g2_B7;
+    private Button f1g2_C1, f1g2_C2, f1g2_C3, f1g2_C4, f1g2_C5, f1g2_C6, f1g2_C7;
+    private Button f1g2_D1, f1g2_D2, f1g2_D3, f1g2_D4, f1g2_D5, f1g2_D6, f1g2_D7;
+    private Button f1g2_E1, f1g2_E2, f1g2_E3, f1g2_E4, f1g2_E5, f1g2_E6, f1g2_E7;
+    private Button f1g2_F1, f1g2_F2, f1g2_F3, f1g2_F4, f1g2_F5, f1g2_F6, f1g2_F7;
+    private Button f1g2_G1, f1g2_G2, f1g2_G3, f1g2_G4, f1g2_G5, f1g2_G6, f1g2_G7;
 
-    interfaceFragment2 iListener_f1g2;
+    private interfaceFragment2 iListener_f1g2;
 
     //Per salvare il fragment
     View view;
@@ -46,11 +46,6 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
         } else {
             iListener_f1g2 = null;
         }
-    }
-
-    //Overrido i metodi del MyDialogFragment
-    @Override
-    public void startNewActivity() {
     }
 
     //Interfaccia
@@ -67,10 +62,7 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
 
         public void toastNonColpito_f1g2();
 
-        //public void createDialog_f1g2();
-
         public String passName_f1g2();
-
     }
 
     @Nullable
@@ -147,7 +139,7 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
             @Override
             public void onClick(View view) {
                 iListener_f1g2.setTextAct_f1g2();
-                iListener_f1g2.cambiaFrag_f1g2(frag);
+                iListener_f1g2.cambiaFrag_f1g2(frag_f1g2);
                 sbloccaButtons_f1g2();
             }
         });
@@ -659,7 +651,7 @@ public class Fragment1G2 extends Fragment implements DialogFragmentVittoria.IDia
         if (contaBarche_f1g2 == 12) {
             //Add nome player da passare a Vittoria
             Intent intent = new Intent(getActivity(), VittoriaActivity.class);
-             nomePlayer2 = iListener_f1g2.passName_f1g2();
+            nomePlayer2 = iListener_f1g2.passName_f1g2();
             intent.putExtra("player", nomePlayer2);
             startActivity(intent);
         }

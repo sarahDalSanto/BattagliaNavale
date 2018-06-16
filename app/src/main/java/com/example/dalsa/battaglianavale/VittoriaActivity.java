@@ -9,9 +9,9 @@ import android.widget.TextView;
 
 public class VittoriaActivity extends AppCompatActivity {
 
-    Button btn_vittoria;
-    String nomePlayer;
-    TextView tv_nomeVincitore;
+    private Button btn_vittoria;
+    private String nomePlayer;
+    private TextView tv_nomeVincitore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

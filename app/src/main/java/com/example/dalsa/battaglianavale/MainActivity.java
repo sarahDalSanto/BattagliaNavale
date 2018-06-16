@@ -11,8 +11,8 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn_iniziaPartita, btn_comeSiGioca;
-    EditText et_giocatore1, et_giocatore2;
+    private Button btn_iniziaPartita, btn_comeSiGioca;
+    private EditText et_giocatore1, et_giocatore2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

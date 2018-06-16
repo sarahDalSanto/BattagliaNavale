@@ -12,14 +12,13 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Main2Activity extends AppCompatActivity implements Fragment1G1.interfaceFragment, Fragment1G2.interfaceFragment2, Fragment2G1.interfaceFragment, Fragment2G2.interfaceFragment2, DialogFragmentVittoria.IDialogFragment, FragIntermedio.interfaceFrag {
+public class Main2Activity extends AppCompatActivity implements Fragment1G1.interfaceFragment, Fragment1G2.interfaceFragment2, Fragment2G1.interfaceFragment, Fragment2G2.interfaceFragment2, FragIntermedio.interfaceFrag {
 
     Fragment1G1 fragment1g1;
     Fragment2G1 fragment2g1;
     Fragment1G2 fragment1g2;
     Fragment2G2 fragment2g2;
 
-    DialogFragmentVittoria dialog1, dialog2;
     boolean dialog, frag;
 
     String nomePlayer1, nomePlayer2;
@@ -33,7 +32,6 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
     public static final String SELEZIONATO_g1 = "SELEZIONATO_G1";
     public static final String SELEZIONATO_g2 = "SELEZIONATO_G2";
     public static final String FRAG = "frag?";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -168,7 +166,6 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
         Snackbar.make(findViewById(R.id.container), "You must select 12 ships only!", Snackbar.LENGTH_SHORT).show();
     }
 
-
     @Override
     public void toastLimiteBarche_f2g2() {
         Snackbar.make(findViewById(R.id.container), "You must select 12 ships only!", Snackbar.LENGTH_SHORT).show();
@@ -256,34 +253,6 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
         transaction.replace(R.id.container, fragment1g1);
         transaction.commit();
     }
-
-    @Override
-    public void startNewActivity() {
-        Intent intent = new Intent(Main2Activity.this, VittoriaActivity.class);
-        if (dialog) {
-            intent.putExtra("player", nomePlayer1);
-        } else {
-            intent.putExtra("player", nomePlayer2);
-        }
-        startActivity(intent);
-    }
-
-    //Dialog fragment vittoria
-    @Override
-    public void createDialog_f1g1() {
-        dialog1 = new DialogFragmentVittoria("HAI VINTO!!!!", "iniziare una nuova partita?");
-        dialog1.show(getFragmentManager(), "dialog1");
-        dialog = true;
-    }
-
-    /*
-    @Override
-    public void createDialog_f1g2() {
-       dialog2 = new DialogFragmentVittoria("HAI VINTO!!!!", "iniziare una nuova partita?");
-        dialog2.show(getFragmentManager(), "dialog2");
-        dialog = false;
-    }
-    */
 
     @Override
     public String passName_f1g2() {

@@ -11,32 +11,32 @@ import android.widget.Button;
 
 public class Fragment2G1 extends Fragment {
 
-    int contaBarche_f2g1 = 0;
+    private int contaBarche_f2g1 = 0;
 
-    boolean doppioClickA1_f2g1 = true, doppioClickA2_f2g1 = true, doppioClickA3_f2g1 = true,
+    private boolean doppioClickA1_f2g1 = true, doppioClickA2_f2g1 = true, doppioClickA3_f2g1 = true,
             doppioClickA4_f2g1 = true, doppioClickA5_f2g1 = true, doppioClickA6_f2g1 = true, doppioClickA7_f2g1 = true;
-    boolean doppioClickB1_f2g1 = true, doppioClickB2_f2g1 = true, doppioClickB3_f2g1 = true,
+    private boolean doppioClickB1_f2g1 = true, doppioClickB2_f2g1 = true, doppioClickB3_f2g1 = true,
             doppioClickB4_f2g1 = true, doppioClickB5_f2g1 = true, doppioClickB6_f2g1 = true, doppioClickB7_f2g1 = true;
-    boolean doppioClickC1_f2g1 = true, doppioClickC2_f2g1 = true, doppioClickC3_f2g1 = true,
+    private boolean doppioClickC1_f2g1 = true, doppioClickC2_f2g1 = true, doppioClickC3_f2g1 = true,
             doppioClickC4_f2g1 = true, doppioClickC5_f2g1 = true, doppioClickC6_f2g1 = true, doppioClickC7_f2g1 = true;
-    boolean doppioClickD1_f2g1 = true, doppioClickD2_f2g1 = true, doppioClickD3_f2g1 = true,
+    private boolean doppioClickD1_f2g1 = true, doppioClickD2_f2g1 = true, doppioClickD3_f2g1 = true,
             doppioClickD4_f2g1 = true, doppioClickD5_f2g1 = true, doppioClickD6_f2g1 = true, doppioClickD7_f2g1 = true;
-    boolean doppioClickE1_f2g1 = true, doppioClickE2_f2g1 = true, doppioClickE3_f2g1 = true,
+    private boolean doppioClickE1_f2g1 = true, doppioClickE2_f2g1 = true, doppioClickE3_f2g1 = true,
             doppioClickE4_f2g1 = true, doppioClickE5_f2g1 = true, doppioClickE6_f2g1 = true, doppioClickE7_f2g1 = true;
-    boolean doppioClickF1_f2g1 = true, doppioClickF2_f2g1 = true, doppioClickF3_f2g1 = true,
+    private boolean doppioClickF1_f2g1 = true, doppioClickF2_f2g1 = true, doppioClickF3_f2g1 = true,
             doppioClickF4_f2g1 = true, doppioClickF5_f2g1 = true, doppioClickF6_f2g1 = true, doppioClickF7_f2g1 = true;
-    boolean doppioClickG1_f2g1 = true, doppioClickG2_f2g1 = true, doppioClickG3_f2g1 = true,
+    private boolean doppioClickG1_f2g1 = true, doppioClickG2_f2g1 = true, doppioClickG3_f2g1 = true,
             doppioClickG4_f2g1 = true, doppioClickG5_f2g1 = true, doppioClickG6_f2g1 = true, doppioClickG7_f2g1 = true;
 
-    interfaceFragment iListener_f2g1;
+    private interfaceFragment iListener_f2g1;
 
-    Button f2g1_A1, f2g1_A2, f2g1_A3, f2g1_A4, f2g1_A5, f2g1_A6, f2g1_A7;
-    Button f2g1_B1, f2g1_B2, f2g1_B3, f2g1_B4, f2g1_B5, f2g1_B6, f2g1_B7;
-    Button f2g1_C1, f2g1_C2, f2g1_C3, f2g1_C4, f2g1_C5, f2g1_C6, f2g1_C7;
-    Button f2g1_D1, f2g1_D2, f2g1_D3, f2g1_D4, f2g1_D5, f2g1_D6, f2g1_D7;
-    Button f2g1_E1, f2g1_E2, f2g1_E3, f2g1_E4, f2g1_E5, f2g1_E6, f2g1_E7;
-    Button f2g1_F1, f2g1_F2, f2g1_F3, f2g1_F4, f2g1_F5, f2g1_F6, f2g1_F7;
-    Button f2g1_G1, f2g1_G2, f2g1_G3, f2g1_G4, f2g1_G5, f2g1_G6, f2g1_G7;
+    private Button f2g1_A1, f2g1_A2, f2g1_A3, f2g1_A4, f2g1_A5, f2g1_A6, f2g1_A7;
+    private Button f2g1_B1, f2g1_B2, f2g1_B3, f2g1_B4, f2g1_B5, f2g1_B6, f2g1_B7;
+    private Button f2g1_C1, f2g1_C2, f2g1_C3, f2g1_C4, f2g1_C5, f2g1_C6, f2g1_C7;
+    private Button f2g1_D1, f2g1_D2, f2g1_D3, f2g1_D4, f2g1_D5, f2g1_D6, f2g1_D7;
+    private Button f2g1_E1, f2g1_E2, f2g1_E3, f2g1_E4, f2g1_E5, f2g1_E6, f2g1_E7;
+    private Button f2g1_F1, f2g1_F2, f2g1_F3, f2g1_F4, f2g1_F5, f2g1_F6, f2g1_F7;
+    private Button f2g1_G1, f2g1_G2, f2g1_G3, f2g1_G4, f2g1_G5, f2g1_G6, f2g1_G7;
 
     //Per salvare il fragment
     View view;

@@ -9,8 +9,8 @@ import android.widget.TextView;
 
 public class IstruzioniActivity extends AppCompatActivity {
 
-    TextView tv_istruzioni;
-    Button btn_indietroIstruzioni;
+    private TextView tv_istruzioni;
+    private Button btn_indietroIstruzioni;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
