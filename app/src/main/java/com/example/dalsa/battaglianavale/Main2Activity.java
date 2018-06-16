@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Main2Activity extends AppCompatActivity implements Fragment1G1.interfaceFragment, Fragment1G2.interfaceFragment2, Fragment2G1.interfaceFragment, Fragment2G2.interfaceFragment2, DialogFragmentVittoria.IDialogFragment, FragIntermedio.interfaceFrag{
+public class Main2Activity extends AppCompatActivity implements Fragment1G1.interfaceFragment, Fragment1G2.interfaceFragment2, Fragment2G1.interfaceFragment, Fragment2G2.interfaceFragment2, DialogFragmentVittoria.IDialogFragment, FragIntermedio.interfaceFrag {
 
     Fragment1G1 fragment1g1;
     Fragment2G1 fragment2g1;
@@ -88,14 +88,20 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
     public void selezionatoTrue_f2g1(int i) {
         selezionatiF2G1[i] = true;
     }
+
     @Override
-    public void selezionatoFalse(int i) {
+    public void selezionatoFalse_f2g1(int i) {
         selezionatiF2G1[i] = false;
     }
 
     //Metodo per i selezionati F2G2
     public void selezionatoTrue_f2g2(int i) {
         selezionatiF2G2[i] = true;
+    }
+
+    @Override
+    public void selezionatoFalse_f2g2(int i) {
+        selezionatiF2G1[i] = false;
     }
 
     //Metodo per controllare se è stato selezionato qualcosa F1G1
@@ -163,7 +169,6 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
     }
 
 
-
     @Override
     public void toastLimiteBarche_f2g2() {
         Snackbar.make(findViewById(R.id.container), "You must select 12 ships only!", Snackbar.LENGTH_SHORT).show();
@@ -172,13 +177,13 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
     @Override
     public void cambiaFrag_f1g1(boolean frag) {
 
-                    FragIntermedio fi = new FragIntermedio();
-                    manager = getSupportFragmentManager();
-                    final FragmentTransaction transaction = manager.beginTransaction();
-                    //Replace perchè alrimenti si sovrappone
-                    transaction.replace(R.id.container, fi);
-                    transaction.commit();
-                    this.frag = frag;
+        FragIntermedio fi = new FragIntermedio();
+        manager = getSupportFragmentManager();
+        final FragmentTransaction transaction = manager.beginTransaction();
+        //Replace perchè alrimenti si sovrappone
+        transaction.replace(R.id.container, fi);
+        transaction.commit();
+        this.frag = frag;
     }
 
     @Override
@@ -189,7 +194,7 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
         //Replace perchè alrimenti si sovrappone
         transaction.replace(R.id.container, fi);
         transaction.commit();
-        this.frag= frag;
+        this.frag = frag;
     }
 
     @Override
@@ -255,9 +260,9 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
     @Override
     public void startNewActivity() {
         Intent intent = new Intent(Main2Activity.this, VittoriaActivity.class);
-        if(dialog){
+        if (dialog) {
             intent.putExtra("player", nomePlayer1);
-        }else{
+        } else {
             intent.putExtra("player", nomePlayer2);
         }
         startActivity(intent);
@@ -266,7 +271,7 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
     //Dialog fragment vittoria
     @Override
     public void createDialog_f1g1() {
-         dialog1 = new DialogFragmentVittoria("HAI VINTO!!!!", "iniziare una nuova partita?");
+        dialog1 = new DialogFragmentVittoria("HAI VINTO!!!!", "iniziare una nuova partita?");
         dialog1.show(getFragmentManager(), "dialog1");
         dialog = true;
     }
@@ -287,14 +292,14 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
 
     @Override
     public void passaTurno(boolean frag) {
-        if(frag){
+        if (frag) {
             //Per il fragment
             manager = getSupportFragmentManager();
             final FragmentTransaction transaction = manager.beginTransaction();
             //Replace perchè alrimenti si sovrappone
             transaction.replace(R.id.container, fragment1g2);
             transaction.commit();
-        }else{
+        } else {
             //Per il fragment
             manager = getSupportFragmentManager();
             final FragmentTransaction transaction = manager.beginTransaction();
