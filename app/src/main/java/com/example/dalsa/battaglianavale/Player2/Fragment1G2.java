@@ -1,4 +1,4 @@
-package com.example.dalsa.battaglianavale;
+package com.example.dalsa.battaglianavale.Player2;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,6 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import com.example.dalsa.battaglianavale.R;
+import com.example.dalsa.battaglianavale.Helpers.VittoriaActivity;
 
 public class Fragment1G2 extends Fragment {
 

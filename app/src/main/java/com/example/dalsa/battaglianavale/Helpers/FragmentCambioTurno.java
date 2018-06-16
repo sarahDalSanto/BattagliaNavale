@@ -1,16 +1,17 @@
-package com.example.dalsa.battaglianavale;
+package com.example.dalsa.battaglianavale.Helpers;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-public class FragIntermedio extends Fragment {
+import com.example.dalsa.battaglianavale.R;
+
+public class FragmentCambioTurno extends Fragment {
 
     interfaceFrag iListener_fi;
     Button btn_intermedio;
@@ -23,8 +24,8 @@ public class FragIntermedio extends Fragment {
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
-        if (activity instanceof FragIntermedio.interfaceFrag) {
-            iListener_fi = (FragIntermedio.interfaceFrag) activity;
+        if (activity instanceof FragmentCambioTurno.interfaceFrag) {
+            iListener_fi = (FragmentCambioTurno.interfaceFrag) activity;
         } else {
             iListener_fi = null;
         }

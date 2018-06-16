@@ -1,18 +1,19 @@
-package com.example.dalsa.battaglianavale;
+package com.example.dalsa.battaglianavale.MainMethod;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
-public class Main2Activity extends AppCompatActivity implements Fragment1G1.interfaceFragment, Fragment1G2.interfaceFragment2, Fragment2G1.interfaceFragment, Fragment2G2.interfaceFragment2, FragIntermedio.interfaceFrag {
+import com.example.dalsa.battaglianavale.Player1.Fragment1G1;
+import com.example.dalsa.battaglianavale.Player1.Fragment2G1;
+import com.example.dalsa.battaglianavale.Player2.Fragment1G2;
+import com.example.dalsa.battaglianavale.Player2.Fragment2G2;
+import com.example.dalsa.battaglianavale.Helpers.FragmentCambioTurno;
+import com.example.dalsa.battaglianavale.R;
+
+public class Main2Activity extends AppCompatActivity implements Fragment1G1.interfaceFragment, Fragment1G2.interfaceFragment2, Fragment2G1.interfaceFragment, Fragment2G2.interfaceFragment2, FragmentCambioTurno.interfaceFrag {
 
     Fragment1G1 fragment1g1;
     Fragment2G1 fragment2g1;
@@ -174,7 +175,7 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
     @Override
     public void cambiaFrag_f1g1(boolean frag) {
 
-        FragIntermedio fi = new FragIntermedio();
+        FragmentCambioTurno fi = new FragmentCambioTurno();
         manager = getSupportFragmentManager();
         final FragmentTransaction transaction = manager.beginTransaction();
         //Replace perchè alrimenti si sovrappone
@@ -185,7 +186,7 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
 
     @Override
     public void cambiaFrag_f1g2(boolean frag) {
-        FragIntermedio fi = new FragIntermedio();
+        FragmentCambioTurno fi = new FragmentCambioTurno();
         manager = getSupportFragmentManager();
         final FragmentTransaction transaction = manager.beginTransaction();
         //Replace perchè alrimenti si sovrappone

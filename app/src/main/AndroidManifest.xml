@@ -5,7 +5,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="BattleShip Players"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
@@ -19,10 +19,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Main2Activity"
+            android:name=".MainMethod.Main2Activity"
             android:screenOrientation="nosensor" />
-        <activity android:name=".VittoriaActivity" />
-        <activity android:name=".IstruzioniActivity" />
+        <activity
+            android:name=".Helpers.VittoriaActivity"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".Helpers.IstruzioniActivity"
+            android:screenOrientation="nosensor" />
     </application>
 
 </manifest>
