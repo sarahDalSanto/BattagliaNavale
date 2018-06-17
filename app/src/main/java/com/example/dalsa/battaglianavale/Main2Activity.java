@@ -15,7 +15,6 @@ import com.example.dalsa.battaglianavale.Player2.Fragment1G2;
 import com.example.dalsa.battaglianavale.Player2.Fragment2G2;
 import com.example.dalsa.battaglianavale.Helpers.FragmentCambioTurno;
 import com.example.dalsa.battaglianavale.PlayerNameSelect.MainActivity;
-import com.example.dalsa.battaglianavale.R;
 
 public class Main2Activity extends AppCompatActivity implements Fragment1G1.interfaceFragment, Fragment1G2.interfaceFragment2, Fragment2G1.interfaceFragment, Fragment2G2.interfaceFragment2, FragmentCambioTurno.interfaceFrag {
 
@@ -25,6 +24,8 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
     Fragment2G2 fragment2g2;
 
     boolean dialog, frag;
+
+    int contaBarche_f1g1, contaBarche_f1g2;
 
     String nomePlayer1, nomePlayer2;
     TextView tv_nomeGiocatore;
@@ -138,6 +139,12 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
     @Override
     public String passName_f1g1() {
         return nomePlayer1;
+    }
+
+    @Override
+    public int passContaBarche_f1g1(int contaBarche) {
+        contaBarche_f1g1 = contaBarche;
+        return contaBarche_f1g1;
     }
 
     @Override
@@ -265,6 +272,13 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
     }
 
     @Override
+    public int passContaBarche_f1g2(int contaBarche) {
+        contaBarche_f1g2 = contaBarche;
+        return contaBarche_f1g2;
+    }
+
+
+    @Override
     public void passaTurno(boolean frag) {
         if (frag) {
             //Per il fragment
@@ -287,6 +301,27 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
     public boolean fragmentG1orG2() {
         return frag;
     }
+
+    @Override
+    public int returnContaBarche_f1g1() {
+        return contaBarche_f1g1 ;
+    }
+
+    @Override
+    public int returnContaBarche_f1g2() {
+        return contaBarche_f1g2;
+    }
+
+    @Override
+    public String returnNomePlayer1() {
+        return nomePlayer1;
+    }
+
+    @Override
+    public String returnNomePlayer2() {
+        return nomePlayer2;
+    }
+
 
     @Override
     public void onBackPressed() {

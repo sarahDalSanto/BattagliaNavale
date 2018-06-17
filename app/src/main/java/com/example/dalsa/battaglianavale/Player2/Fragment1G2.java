@@ -66,6 +66,8 @@ public class Fragment1G2 extends Fragment {
         public void toastNonColpito_f1g2();
 
         public String passName_f1g2();
+
+        public int passContaBarche_f1g2(int contaBarche);
     }
 
     @Nullable
@@ -144,6 +146,8 @@ public class Fragment1G2 extends Fragment {
                 iListener_f1g2.setTextAct_f1g2();
                 iListener_f1g2.cambiaFrag_f1g2(frag_f1g2);
                 sbloccaButtons_f1g2();
+                iListener_f1g2.passName_f1g2();
+                iListener_f1g2.passContaBarche_f1g2(contaBarche_f1g2);
             }
         });
 
