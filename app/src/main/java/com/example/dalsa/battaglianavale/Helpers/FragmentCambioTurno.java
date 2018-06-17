@@ -15,7 +15,7 @@ public class FragmentCambioTurno extends Fragment {
 
     interfaceFrag iListener_fi;
     Button btn_intermedio;
-    boolean frag;
+    boolean sceltaFrag;
 
     //Per salvare il fragment
     View view;
@@ -35,7 +35,7 @@ public class FragmentCambioTurno extends Fragment {
     public interface interfaceFrag {
         public void passaTurno(boolean frag);
 
-        public boolean cheFrag();
+        public boolean fragmentG1orG2();
     }
 
     @Nullable
@@ -50,14 +50,14 @@ public class FragmentCambioTurno extends Fragment {
         }
         view = inflater.inflate(R.layout.frag_intermedio, container, false);
 
-        frag = true;
+        sceltaFrag = true;
 
         btn_intermedio = view.findViewById(R.id.btn_intermedio);
         btn_intermedio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                frag = iListener_fi.cheFrag();
-                iListener_fi.passaTurno(frag);
+                sceltaFrag = iListener_fi.fragmentG1orG2();
+                iListener_fi.passaTurno(sceltaFrag);
             }
         });
 

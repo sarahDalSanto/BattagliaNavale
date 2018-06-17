@@ -1,8 +1,11 @@
 package com.example.dalsa.battaglianavale;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
@@ -11,6 +14,7 @@ import com.example.dalsa.battaglianavale.Player1.Fragment2G1;
 import com.example.dalsa.battaglianavale.Player2.Fragment1G2;
 import com.example.dalsa.battaglianavale.Player2.Fragment2G2;
 import com.example.dalsa.battaglianavale.Helpers.FragmentCambioTurno;
+import com.example.dalsa.battaglianavale.PlayerNameSelect.MainActivity;
 import com.example.dalsa.battaglianavale.R;
 
 public class Main2Activity extends AppCompatActivity implements Fragment1G1.interfaceFragment, Fragment1G2.interfaceFragment2, Fragment2G1.interfaceFragment, Fragment2G2.interfaceFragment2, FragmentCambioTurno.interfaceFrag {
@@ -280,7 +284,24 @@ public class Main2Activity extends AppCompatActivity implements Fragment1G1.inte
     }
 
     @Override
-    public boolean cheFrag() {
+    public boolean fragmentG1orG2() {
         return frag;
+    }
+
+    @Override
+    public void onBackPressed() {
+        //Avvio dialog
+        new AlertDialog.Builder(Main2Activity.this)
+                .setTitle("BattleShip Players")
+                .setMessage("Do you really want to exit? \nThis game will be cancelled!")
+                .setIcon(R.drawable.ship_selected_white)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int whichButton) {
+
+                        Intent intent = new Intent(Main2Activity.this, MainActivity.class);
+                        startActivity(intent);
+                    }
+                })
+                .setNegativeButton("No", null).show();
     }
 }
